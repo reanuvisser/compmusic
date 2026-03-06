@@ -1,0 +1,32 @@
+---
+title: "Phonk Outlier Analysis: Brazil vs. Russia"
+format: 
+  dashboard:
+    orientation: rows
+---
+
+# Visual Analysis
+
+## Row
+
+### Brazilian Phonk: MONTAGEM REBOLA
+The chromagram for the Brazilian track shows intense, vertical noise streaks across all 12 pitch classes. This confirms that the track prioritizes timbral energy over melody, aligning with Topic H5 which represents the absence of identifiable chord structure found in high-energy, rap-related genres.
+
+
+
+### Russian Phonk: S.X.N.D. N.X.D.E.S.
+The Russian track displays distinct horizontal lines, particularly at F# and D. This visualizes the repetitive cowbell loops that define the genre's modal structure and provides a clear physical measure of its melodic content.
+
+
+
+# Key & Chord Analysis
+
+## Row
+
+### Harmonic Lexicon and Key Estimation
+To evaluate the "Harmonic Fingerprint" of these tracks, I used the H-lexicon approach to identify chord changes. While the Brazilian track lacks a traditional harmonic center (Topic H5), the Russian Drift Phonk track is heavily anchored in an **F# Minor** modal center.
+
+
+
+### Technical Implementation
+Using R and ggplot2, I corrected axis NA errors to ensure a full 12-semitone mapping. This ensures better construct validity for the final portfolio evaluation by accurately representing the "dirty" color of the dissonant intervals found in the Russian track, similar to Topic H1 in Blues.
