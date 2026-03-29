@@ -4,7 +4,7 @@ title: "Conclusion"
 
 ## Key Findings
 
-This project tried to answer one main question. Can computer analysis capture the differences between Brazilian and Russian Phonk? [cite_start]The answer is a clear yes, but there are some important details[cite: 66]. [cite_start]By looking at harmony, loudness, tempo, rhythm, texture, and machine learning, we see a consistent pattern[cite: 67].
+This project tried to answer one main question. Can computer analysis capture the differences between Brazilian and Russian Phonk? The answer is a clear yes, but there are some important details. By looking at harmony, loudness, tempo, rhythm, texture, and machine learning, we see a consistent pattern.
 
 ---
 
@@ -12,19 +12,19 @@ This project tried to answer one main question. Can computer analysis capture th
 
 **1. Harmony is very important for defining these genres, but in opposite ways.**
 
-[cite_start]The chroma analysis showed that Brazilian Phonk does not focus on harmony[cite: 68]. [cite_start]Its energy is spread across all pitches in quick bursts, so there is no main musical key[cite: 68]. [cite_start]On the other hand, Russian Drift Phonk is firmly anchored to a clear F# Minor key the whole time[cite: 69]. [cite_start]This is done on purpose[cite: 70]. [cite_start]Russian producers use harmony to tell a story, while Brazilian producers just use it for sound texture[cite: 70].
+The chroma analysis showed that Brazilian Phonk does not focus on harmony. Its energy is spread across all pitches in quick bursts, so there is no main musical key. On the other hand, Russian Drift Phonk is firmly anchored to a clear F# Minor key the whole time. This is done on purpose. Russian producers use harmony to tell a story, while Brazilian producers just use it for sound texture.
 
 **2. Tempo is the biggest difference.**
 
-[cite_start]It is amazing that Brazilian Phonk almost always stays around 130 BPM, especially since the genre has no official rules[cite: 71]. [cite_start]This happened naturally through community feedback and streaming data[cite: 72]. [cite_start]Producers who strayed from 130 BPM simply got fewer streams[cite: 72]. [cite_start]This is a great example of how platform algorithms indirectly shape how a genre sounds[cite: 73]. [cite_start]Meanwhile, Russian Phonk has a very wide tempo range of 80 to 180 BPM[cite: 74]. [cite_start]This makes sense because it started with car-culture video editors[cite: 74]. [cite_start]They needed tracks that felt intense, not tracks that followed standard dance rules[cite: 74].
+It is amazing that Brazilian Phonk almost always stays around 130 BPM, especially since the genre has no official rules. This happened naturally through community feedback and streaming data. Producers who strayed from 130 BPM simply got fewer streams. This is a great example of how platform algorithms indirectly shape how a genre sounds. Meanwhile, Russian Phonk has a very wide tempo range of 80 to 180 BPM. This makes sense because it started with car-culture video editors. They needed tracks that felt intense, not tracks that followed standard dance rules.
 
 **3. Rhythm and sound texture show different goals.**
 
-[cite_start]By looking at rhythmic peaks, we can see that Brazilian Phonk keeps a constant wall of sound[cite: 138]. [cite_start]It relies on a non-stop rhythmic loop with no quiet parts or real breaks[cite: 139]. [cite_start]The Russian track breathes a lot more[cite: 148]. [cite_start]It uses quieter intros, slow build-ups, and heavy drops to boost the energy[cite: 143]. We also looked at sound texture over time. [cite_start]Brazilian Phonk keeps the same texture on purpose[cite: 167]. [cite_start]Russian Drift Phonk actually changes its texture to create a sense of movement and drama[cite: 167].
+By looking at rhythmic peaks, we can see that Brazilian Phonk keeps a constant wall of sound. It relies on a non-stop rhythmic loop with no quiet parts or real breaks. The Russian track breathes a lot more. It uses quieter intros, slow build-ups, and heavy drops to boost the energy. We also looked at sound texture over time. Brazilian Phonk keeps the same texture on purpose. Russian Drift Phonk actually changes its texture to create a sense of movement and drama.
 
 **4. The computer model works, but Russian Phonk is harder to pin down.**
 
-[cite_start]The machine learning model was 90% accurate on our 114 tracks, which is a strong result[cite: 75]. [cite_start]The 10% error rate mostly came from mixing up Russian Phonk tracks[cite: 76]. [cite_start]This is not a failure, but actually a really cool finding[cite: 76]. [cite_start]It shows that Russian Drift Phonk is very open[cite: 77]. [cite_start]It borrows sounds from other genres, including Brazilian Phonk, while still keeping its own vibe[cite: 77]. [cite_start]This is totally normal for an experimental, internet-driven genre that does not have strict rules yet[cite: 78].
+The machine learning model was 90% accurate on our 114 tracks, which is a strong result. The 10% error rate mostly came from mixing up Russian Phonk tracks. This is not a failure, but actually a really cool finding. It shows that Russian Drift Phonk is very open. It borrows sounds from other genres, including Brazilian Phonk, while still keeping its own vibe. This is totally normal for an experimental, internet-driven genre that does not have strict rules yet.
 
 ---
 
@@ -32,15 +32,15 @@ This project tried to answer one main question. Can computer analysis capture th
 
 | Audience | Application |
 |:---|:---|
-| **Streaming platforms** | [cite_start]Better tags and more accurate recommendations for Phonk listeners[cite: 80]. |
-| **Music researchers** | [cite_start]A new way to study how online communities change music styles[cite: 81]. |
-| **Producers** | [cite_start]Real data on what audio features make each style popular[cite: 82]. |
-| **Playlist curators** | [cite_start]A math-based way to separate Brazilian and Russian Phonk for mood playlists[cite: 83]. |
+| **Streaming platforms** | Better tags and more accurate recommendations for Phonk listeners. |
+| **Music researchers** | A new way to study how online communities change music styles. |
+| **Producers** | Real data on what audio features make each style popular. |
+| **Playlist curators** | A math-based way to separate Brazilian and Russian Phonk for mood playlists. |
 
 ---
 
 ### Reflection
 
-[cite_start]This project completely changed how I think about my own tracks[cite: 84]. [cite_start]Seeing *MONTAGEM REBOLA* as just vertical noise on a chart made a lot of sense[cite: 85]. [cite_start]I realized I made a track with no harmony because the genre's rules simply do not want it[cite: 85]. 
+This project completely changed how I think about my own tracks. Seeing *MONTAGEM REBOLA* as just vertical noise on a chart made a lot of sense. I realized I made a track with no harmony because the genre's rules simply do not want it. 
 
-[cite_start]My Brazilian track looks very typical for its genre in the computer data[cite: 86]. However, the Russian track *S.X.N.D. N.X.D.E.S.* is actually pretty unusual for Russian Phonk because it was so easy to classify[cite: 87]. [cite_start]Knowing this gives me a fresh way to look at my own creative choices[cite: 87]. [cite_start]Using computers to study music does not replace actually listening to it, but it does help us see the hidden rules behind what we hear[cite: 88]. [cite_start]This is especially true for Phonk, since it is a genre born on the internet, shaped by algorithms, and defined by community feedback[cite: 89].
+My Brazilian track looks very typical for its genre in the computer data. However, the Russian track *S.X.N.D. N.X.D.E.S.* is actually pretty unusual for Russian Phonk because it was so easy to classify. Knowing this gives me a fresh way to look at my own creative choices. Using computers to study music does not replace actually listening to it, but it does help us see the hidden rules behind what we hear. This is especially true for Phonk, since it is a genre born on the internet, shaped by algorithms, and defined by community feedback.
