@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: _site
+  output-dir: site
 
 website:
   title: "Phonk Outlier Analysis"
@@ -24,7 +24,7 @@ website:
         text: "Conclusion"
     right:
       - icon: github
-        href: https://github.com/rickyspeijker
+        href: https://github.com/reanuvisser
   page-footer:
     left: "Computational Musicology Portfolio · University of Amsterdam"
     right: "Reanu Visser · 2026"
