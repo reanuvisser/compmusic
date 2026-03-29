@@ -1,0 +1,123 @@
+---
+title: "Timbre Features"
+---
+```{r setup}
+#| include: false
+library(tuneR)
+library(seewave)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+
+# Load audio files
+brazil_wav <- readMP3("MONTAGEM REBOLA.mp3")
+russian_wav <- readMP3("GREEN ORXNGE x Send 1 - S.X.N.D. N.X.D.E.S..mp3")
+
+# Convert to mono if stereo
+if (brazil_wav@stereo) brazil_wav <- mono(brazil_wav, "both")
+if (russian_wav@stereo) russian_wav <- mono(russian_wav, "both")
+
+# Compute MFCCs
+brazil_mfcc <- melfcc(brazil_wav, numcep = 13, hoptime = 0.05)
+russian_mfcc <- melfcc(russian_wav, numcep = 13, hoptime = 0.05)
+
+# Self-similarity matrix function
+compute_ssm <- function(mfcc_matrix) {
+  n <- nrow(mfcc_matrix)
+  ssm <- matrix(0, n, n)
+  for (i in 1:n) {
+    for (j in 1:n) {
+      diff <- mfcc_matrix[i,] - mfcc_matrix[j,]
+      ssm[i,j] <- 1 / (1 + sqrt(sum(diff^2)))
+    }
+  }
+  ssm
+}
+
+# Subsample for performance (every 4th frame = ~0.2s resolution)
+br_sub <- brazil_mfcc[seq(1, nrow(brazil_mfcc), by = 4), ]
+ru_sub <- russian_mfcc[seq(1, nrow(russian_mfcc), by = 4), ]
+
+brazil_ssm <- compute_ssm(br_sub)
+russian_ssm <- compute_ssm(ru_sub)
+
+# Helper to convert SSM to long format for ggplot
+ssm_to_df <- function(ssm_matrix, hop = 0.2) {
+  n <- nrow(ssm_matrix)
+  times <- seq(0, by = hop, length.out = n)
+  expand.grid(Time1 = times, Time2 = times) %>%
+    mutate(Similarity = as.vector(ssm_matrix))
+}
+
+brazil_ssm_df <- ssm_to_df(brazil_ssm)
+russian_ssm_df <- ssm_to_df(russian_ssm)
+
+phonk_theme <- theme_minimal(base_size = 13) +
+  theme(
+    plot.background = element_rect(fill = "#141417", color = NA),
+    panel.background = element_rect(fill = "#141417", color = NA),
+    panel.grid = element_blank(),
+    text = element_text(color = "#e8e8f0"),
+    axis.text = element_text(color = "#888899", size = 10),
+    axis.title = element_text(color = "#888899", size = 11),
+    plot.title = element_text(color = "#e8e8f0", face = "bold", size = 14),
+    plot.subtitle = element_text(color = "#888899", size = 11),
+    legend.background = element_rect(fill = "#141417", color = NA),
+    legend.text = element_text(color = "#888899"),
+    legend.title = element_text(color = "#888899")
+  )
+```
+
+## Timbre Features
+
+Timbre is what makes two instruments playing the same note sound different. It is the texture and color of a sound. In music production, timbre is what separates a dense, wall-of-sound drop from a sparse, open breakdown. To measure it computationally, we use **Mel-Frequency Cepstral Coefficients (MFCCs)**, which capture how energy is distributed across frequency bands over time.
+
+A **self-similarity matrix (SSM)** takes those MFCC values and compares every moment in a track to every other moment. Sections that sound similar to each other show up as bright squares along the diagonal. Repeated sections show up as bright off-diagonal blocks.
+
+---
+
+## 🇧🇷 MONTAGEM REBOLA
+```{r}
+#| echo: false
+#| fig-height: 5
+#| fig-cap: "Self-similarity matrix: Montagem Rebola (MFCC-based)"
+
+ggplot(brazil_ssm_df, aes(x = Time1, y = Time2, fill = Similarity)) +
+  geom_tile() +
+  scale_fill_viridis_c(option = "inferno", name = "Similarity") +
+  labs(
+    title = "Timbre Self-Similarity: MONTAGEM REBOLA",
+    subtitle = "Brazilian Phonk — MFCC cosine similarity",
+    x = "Time (s)", y = "Time (s)"
+  ) +
+  phonk_theme
+```
+
+The SSM for *MONTAGEM REBOLA* is expected to show a strongly uniform structure. Because the track is built from a single repeating loop with minimal variation, nearly every section should look similar to every other section. The bright diagonal confirms timbral consistency; any bright off-diagonal blocks reveal where the loop repeats.
+
+---
+
+## 🇷🇺 S.X.N.D. N.X.D.E.S.
+```{r}
+#| echo: false
+#| fig-height: 5
+#| fig-cap: "Self-similarity matrix: S.X.N.D. N.X.D.E.S. (MFCC-based)"
+
+ggplot(russian_ssm_df, aes(x = Time1, y = Time2, fill = Similarity)) +
+  geom_tile() +
+  scale_fill_viridis_c(option = "inferno", name = "Similarity") +
+  labs(
+    title = "Timbre Self-Similarity: S.X.N.D. N.X.D.E.S.",
+    subtitle = "Russian Drift Phonk — MFCC cosine similarity",
+    x = "Time (s)", y = "Time (s)"
+  ) +
+  phonk_theme
+```
+
+The Russian track is expected to show more structural variation in its SSM. The cinematic, tension-and-release architecture of Russian Drift Phonk means sections change more noticeably over time. Look for distinct rectangular blocks that separate the intro, main section, and any breakdown passages. These would confirm that the track has a deliberate structural arc rather than pure loop repetition.
+
+---
+
+## What Timbre Tells Us
+
+Comparing the two SSMs reveals something the chromagrams and tempo charts cannot: how the *texture* of each track evolves over time. Brazilian Phonk is timbrally static by design. Russian Drift Phonk uses timbral shifts to create a sense of movement and drama. This structural difference is one more way the two subgenres diverge at a computational level.

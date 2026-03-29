@@ -1,0 +1,69 @@
+---
+title: "Corpus"
+---
+```{r setup}
+#| include: false
+library(DT)
+library(dplyr)
+library(stringr)
+
+brazilian <- read.csv("Brazilian_Phonk_UvA.csv")
+russian <- read.csv("Drift_Phonk_UvA.csv")
+brazilian$Genre <- "Brazilian Phonk"
+russian$Genre <- "Russian Drift Phonk"
+corpus <- bind_rows(brazilian, russian)
+```
+
+## The Two Playlists
+
+The corpus consists of **114 tracks** drawn from two Spotify playlists, each anchoring one end of the Phonk spectrum. Playlists were exported using Exportify and enriched with Spotify's audio features via the API. The Brazilian Phonk playlist represents the high-energy, rave-ready end of the spectrum, while Russian Drift Phonk captures the darker, cinematic subgenre that went viral through car-culture communities online.
+
+Both playlists are embedded below for listening reference.
+
+### 🇧🇷 Brazilian Phonk
+
+<span class="genre-tag brazilian">~57 tracks · ~130 BPM · aggressive loops · maximal energy</span>
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6vElGfMJzyHxZ4zf7BhgDJ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+### 🇷🇺 Russian Drift Phonk
+
+<span class="genre-tag russian">~57 tracks · 80–180 BPM · dark modality · cowbell-driven</span>
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0IitKxIvkOvvrd8dDnFHdu?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+---
+
+## Corpus Overview
+
+The table below contains all tracks with their Spotify audio features. Use the column filters to search by genre, artist, or feature range.
+```{r}
+#| echo: false
+corpus |>
+  select(Genre, Track.Name, Artist.Name.s., Tempo, Energy, Danceability, Valence, Loudness, Popularity) |>
+  mutate(
+    Artist.Name.s. = str_replace_all(Artist.Name.s., ";", " &"),
+    Tempo = round(Tempo, 1),
+    Energy = round(Energy, 3),
+    Danceability = round(Danceability, 3),
+    Valence = round(Valence, 3),
+    Loudness = round(Loudness, 1)
+  ) |>
+  rename(
+    Artists = Artist.Name.s.,
+    Track = Track.Name
+  ) |>
+  datatable(
+    filter = "top",
+    options = list(
+      pageLength = 15,
+      scrollX = TRUE,
+      dom = 'frtip',
+      columnDefs = list(
+        list(className = 'dt-center', targets = 3:8)
+      )
+    ),
+    class = "table table-striped table-hover table-sm",
+    rownames = FALSE
+  )
+```

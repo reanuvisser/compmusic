@@ -1,0 +1,51 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Phonk Outlier Analysis"
+  navbar:
+    left:
+      - href: index.qmd
+        text: "About"
+      - href: corpus.qmd
+        text: "Corpus"
+      - href: chroma-features.qmd
+        text: "Chroma Features"
+      - href: loudness.qmd
+        text: "Loudness & Rhythm"
+      - href: timbre.qmd
+        text: "Timbre"
+      - href: temporal.qmd
+        text: "Temporal"
+      - href: classification.qmd
+        text: "Classification"
+      - href: conclusion.qmd
+        text: "Conclusion"
+    right:
+      - icon: github
+        href: https://github.com/rickyspeijker
+  page-footer:
+    left: "Computational Musicology Portfolio · University of Amsterdam"
+    right: "Reanu Visser · 2026"
+
+format:
+  html:
+    theme: darkly
+    css: style.css
+    toc: true
+    toc-depth: 3
+    toc-title: "On this page"
+    smooth-scroll: true
+    code-fold: true
+    code-tools: true
+    fig-align: center
+    fig-width: 8
+    fig-height: 5
+    df-print: paged
+
+execute:
+  echo: false
+  warning: false
+  message: false
+

@@ -1,0 +1,289 @@
+[
+  {
+    "objectID": "loudness.html",
+    "href": "loudness.html",
+    "title": "Loudness & Rhythm",
+    "section": "",
+    "text": "This section looks at two features that shape how Phonk feels to a listener: tempo (how fast the track moves) and loudness (how hard it hits). In Phonk, these are not just technical measurements. They are creative choices that define the mood and purpose of a track."
+  },
+  {
+    "objectID": "loudness.html#temporal-and-dynamic-structure",
+    "href": "loudness.html#temporal-and-dynamic-structure",
+    "title": "Loudness & Rhythm",
+    "section": "",
+    "text": "This section examines two of the most immediately perceptible dimensions of music: tempo (rhythmic speed) and loudness (dynamic intensity). For Phonk — a genre defined largely by its physical impact — these features carry exceptional diagnostic weight. The question is whether Brazilian and Russian Phonk are measurably different in how they deploy tempo and loudness, and what this tells us about their production cultures."
+  },
+  {
+    "objectID": "loudness.html#tempo-distribution",
+    "href": "loudness.html#tempo-distribution",
+    "title": "Loudness & Rhythm",
+    "section": "Tempo Distribution",
+    "text": "Tempo Distribution\n\n\n\n\n\n\n\n\n\nThe most striking thing about this chart is the tall red spike at 130 BPM. Almost all Brazilian Phonk tracks cluster right there. This kind of consistency is rare in music and suggests that 130 BPM has become an unwritten rule for this subgenre. Producers who deviate from it get fewer streams, so the genre has slowly locked in around that number.\nRussian Drift Phonk looks completely different. The blue bars are spread out from around 80 BPM to 180 BPM. This makes sense given the genre’s origins: Russian Phonk grew out of car-culture video communities online, where producers cared more about the feeling of a track than following a tempo convention.\nThe corpus has roughly equal numbers of tracks from each subgenre (about 57 each), so the Brazilian spike is real and not just a result of having more tracks."
+  },
+  {
+    "objectID": "loudness.html#loudness-energy",
+    "href": "loudness.html#loudness-energy",
+    "title": "Loudness & Rhythm",
+    "section": "Loudness & Energy",
+    "text": "Loudness & Energy\n\n\n\n\n\nLoudness and Energy distributions by subgenre\n\n\n\n\n\nInterpretation\nLoudness (measured in dBFS, where values closer to 0 are louder) and Energy (Spotify’s perceptual measure of intensity) together tell us about the dynamic signature of each subgenre.\nBrazilian Phonk is expected to be louder and more energy-dense on average — this is consistent with its club-ready, maximally-compressed production approach. Russian Phonk, while still aggressive by most standards, allows more dynamic range to create atmospheric tension, particularly in intro and breakdown passages.\nIf the data confirms this: the loudness differential is not merely a production preference — it is a genre-defining convention. Brazilian producers master their tracks to hit as hard as possible because the context demands it. Russian producers deliberately leave headroom for dramatic impact moments."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Phonk Outlier Analysis: Brazil vs. Russia",
+    "section": "",
+    "text": "Phonk is a genre of hip-hop and electronic music that started in the early 2010s on SoundCloud. It was originally built on sampled Memphis rap vocals, lo-fi production, and heavy 808 bass. Over time, two very different regional versions of the genre emerged, each taking it in a completely different direction.\n\n\n\n\nBrazilian Phonk turned the genre into a high-energy club sound. Producers dropped the lo-fi aesthetic and replaced it with tight, aggressive loops, heavy compression, and tempos locked around 130 BPM. It now dominates Brazilian streaming charts and shows up in workout playlists and DJ sets. The style is very consistent by design.\nKey characteristics:\n\nTempo: ~130 BPM (very consistent)\nHigh energy and loud\nMinimal melody\nMade for clubs and gyms\n\n\n\n\n\nRussian Drift Phonk went in a darker, more cinematic direction. It grew out of online car-culture communities and is known for haunting cowbell loops, minor-key melodies, and a much wider tempo range. The genre blew up on TikTok and YouTube through drift car videos.\nKey characteristics:\n\nTempo: 80–180 BPM (very spread out)\nDark, minor-key sound\nStrong cowbell and synth melodies\nLinked to motorsport and action content"
+  },
+  {
+    "objectID": "index.html#about-this-project",
+    "href": "index.html#about-this-project",
+    "title": "Phonk Outlier Analysis: Brazil vs. Russia",
+    "section": "",
+    "text": "Phonk is a genre of hip-hop and electronic music that started in the early 2010s on SoundCloud. It was originally built on sampled Memphis rap vocals, lo-fi production, and heavy 808 bass. Over time, two very different regional versions of the genre emerged, each taking it in a completely different direction.\n\n\n\n\nBrazilian Phonk turned the genre into a high-energy club sound. Producers dropped the lo-fi aesthetic and replaced it with tight, aggressive loops, heavy compression, and tempos locked around 130 BPM. It now dominates Brazilian streaming charts and shows up in workout playlists and DJ sets. The style is very consistent by design.\nKey characteristics:\n\nTempo: ~130 BPM (very consistent)\nHigh energy and loud\nMinimal melody\nMade for clubs and gyms\n\n\n\n\n\nRussian Drift Phonk went in a darker, more cinematic direction. It grew out of online car-culture communities and is known for haunting cowbell loops, minor-key melodies, and a much wider tempo range. The genre blew up on TikTok and YouTube through drift car videos.\nKey characteristics:\n\nTempo: 80–180 BPM (very spread out)\nDark, minor-key sound\nStrong cowbell and synth melodies\nLinked to motorsport and action content"
+  },
+  {
+    "objectID": "index.html#my-submitted-tracks",
+    "href": "index.html#my-submitted-tracks",
+    "title": "Phonk Outlier Analysis: Brazil vs. Russia",
+    "section": "My Submitted Tracks",
+    "text": "My Submitted Tracks\nFor the class corpus, I submitted two tracks — one from each subgenre — to serve as reference points for the analysis.\n\n\n\n\n\n\n\n\n\n\nTrack\nSubgenre\nBPM\nKey\nNotes\n\n\n\n\nMONTAGEM REBOLA\nBrazilian Phonk\n~130\nAtonal\nAggressive loop-based structure, no melodic center\n\n\nS.X.N.D. N.X.D.E.S.\nRussian Drift Phonk\n~95\nF# Minor\nCowbell-driven, dark modal atmosphere\n\n\n\nThese two tracks represent the extremes of the Phonk spectrum and were chosen specifically because their divergence makes them ideal candidates for computational comparison. The central research question driving this portfolio is:\n\nCan computational musicology capture the stylistic divergence between Brazilian and Russian Phonk — and if so, which acoustic features are the most discriminating?"
+  },
+  {
+    "objectID": "index.html#research-overview",
+    "href": "index.html#research-overview",
+    "title": "Phonk Outlier Analysis: Brazil vs. Russia",
+    "section": "Research Overview",
+    "text": "Research Overview\nThis portfolio covers the analysis in five sections:\n\nCorpus — The dataset of tracks, including the Spotify playlists\nChroma Features — Pitch and harmony analysis of one track from each subgenre\nLoudness & Rhythm — Tempo and loudness patterns across both subgenres\nClassification — A machine learning model trained to distinguish the two styles\nConclusion — Key takeaways and what they mean\n\nUse the navigation bar at the top to move between sections."
+  },
+  {
+    "objectID": "corpus.html",
+    "href": "corpus.html",
+    "title": "Corpus",
+    "section": "",
+    "text": "The corpus consists of 114 tracks drawn from two Spotify playlists, each anchoring one end of the Phonk spectrum. Playlists were exported using Exportify and enriched with Spotify’s audio features via the API. The Brazilian Phonk playlist represents the high-energy, rave-ready end of the spectrum, while Russian Drift Phonk captures the darker, cinematic subgenre that went viral through car-culture communities online.\nBoth playlists are embedded below for listening reference.\n\n\n~57 tracks · ~130 BPM · aggressive loops · maximal energy\n\n\n\n\n\n~57 tracks · 80–180 BPM · dark modality · cowbell-driven"
+  },
+  {
+    "objectID": "corpus.html#the-two-playlists",
+    "href": "corpus.html#the-two-playlists",
+    "title": "Corpus",
+    "section": "",
+    "text": "The corpus consists of 114 tracks drawn from two Spotify playlists, each anchoring one end of the Phonk spectrum. Playlists were exported using Exportify and enriched with Spotify’s audio features via the API. The Brazilian Phonk playlist represents the high-energy, rave-ready end of the spectrum, while Russian Drift Phonk captures the darker, cinematic subgenre that went viral through car-culture communities online.\nBoth playlists are embedded below for listening reference.\n\n\n~57 tracks · ~130 BPM · aggressive loops · maximal energy\n\n\n\n\n\n~57 tracks · 80–180 BPM · dark modality · cowbell-driven"
+  },
+  {
+    "objectID": "corpus.html#corpus-overview",
+    "href": "corpus.html#corpus-overview",
+    "title": "Corpus",
+    "section": "Corpus Overview",
+    "text": "Corpus Overview\nThe table below contains all tracks with their Spotify audio features. Use the column filters to search by genre, artist, or feature range."
+  },
+  {
+    "objectID": "chroma-features.html",
+    "href": "chroma-features.html",
+    "title": "Chroma Features",
+    "section": "",
+    "text": "A chromagram shows how the energy in a track is spread across the 12 pitch classes (C, C#, D, and so on) over time. Instead of showing exact frequencies, it collapses everything into a single octave. This makes it easier to spot harmonic patterns, like a repeated chord or a consistent key center, across a full track.\n\n\nThe x-axis shows time (in seconds). The y-axis shows the 12 pitch classes, from C at the bottom to B at the top. Brighter colors mean more energy at that pitch class at that moment.\n\nBright vertical streaks across many pitch classes at once suggest a noisy, rhythmic hit with no clear harmonic content\nBright horizontal bands running across the full width suggest a stable pitch that repeats throughout the track"
+  },
+  {
+    "objectID": "chroma-features.html#pitch-class-analysis",
+    "href": "chroma-features.html#pitch-class-analysis",
+    "title": "Chroma Features",
+    "section": "",
+    "text": "Chroma features — also called pitch-class profiles — represent the distribution of energy across the 12 musical pitch classes (C, C#, D, … B) over time. Unlike raw frequency analysis, chroma features are octave-invariant: they collapse all octaves into a single representation, making them ideal for detecting harmonic patterns, recurring chord structures, and modal centers.\nBelow, the chromagrams for my two submitted tracks are shown side-by-side, followed by a detailed interpretation of each.\n\n\n\n\n\n\n\n\nChroma feature analysis: Montagem Rebola\n\n\nWhat to look for: Chromagrams are read left-to-right (time) and bottom-to-top (pitch classes C through B). Bright vertical streaks across all pitch classes simultaneously indicate broadband noise events — moments where the signal is rhythmically dense but harmonically undefined.\n\n\nThe chromagram for MONTAGEM REBOLA is dominated by intense, full-spectrum vertical bursts that activate nearly all 12 pitch classes at once. There is no persistent horizontal band — meaning no single pitch class is held consistently over time. This pattern is the computational signature of a harmonically chaotic track: the energy is everywhere, but melodically, it is nowhere.\nThis aligns with H-topic H5 (identified in the course), which characterises high-energy, rap-adjacent genres where rhythmic and timbral punch take absolute priority over melodic content. The “bursts” correspond to the hard-hitting loop onsets that define Brazilian Phonk’s signature aggression.\nSections and contrast: The chromagram shows relatively uniform intensity throughout — there are no quiet, melodic passages or structural contrasts. The track is designed for sustained, unbroken energy, and the chromagram confirms this computationally.\n\n\n\n\n\n\n\n\nChroma feature analysis: S.X.N.D. N.X.D.E.S.\n\n\nWhat to look for: Bright horizontal bands that persist across time indicate a stable pitch center — the harmonic “home base” of the track. The pitch classes F# (row 7) and D (row 3) are of particular interest here.\n\n\nThe Russian track presents a starkly different picture. Rather than scattered vertical bursts, it displays clear, sustained horizontal bands — most prominently at F# and D — that persist across the entire track. This is the chromagram signature of a modally anchored composition.\nThe dominance of F# and D places the track firmly in F# Minor — a tonality associated with darkness and tension. This is not accidental: Russian Drift Phonk heavily borrows from the aesthetic of dark electronic and Memphis rap, and its producers consciously construct modal atmospheres. The recurring cowbell motif (which defines the subgenre) plays a short, looped melodic figure that reinforces this F# center throughout.\nSections and contrast: Unlike the Brazilian track, the Russian chromagram shows subtle variations in band intensity that correspond to structural moments — slight energy shifts between the intro loop, the main section, and brief breakdowns. These transitions are musically intentional, reflecting the genre’s cinematic, tension-and-release architecture."
+  },
+  {
+    "objectID": "chroma-features.html#comparative-summary",
+    "href": "chroma-features.html#comparative-summary",
+    "title": "Chroma Features",
+    "section": "Comparative Summary",
+    "text": "Comparative Summary\n\n\n\n\n\n\n\n\nFeature\nMONTAGEM REBOLA 🇧🇷\nS.X.N.D. N.X.D.E.S. 🇷🇺\n\n\n\n\nChroma pattern\nScattered vertical bursts\nPersistent horizontal bands\n\n\nHarmonic center\nNone (atonal / H5)\nF# Minor\n\n\nStructural contrast\nMinimal — uniform energy\nModerate — subtle section shifts\n\n\nDominant pitch classes\nAll (simultaneous, brief)\nF#, D (sustained)\n\n\nMusical function\nRhythmic impact over melody\nMelodic atmosphere over rhythm\n\n\n\nThe two tracks represent opposite ends of the Phonk harmonic spectrum. Brazilian Phonk sacrifices harmonic identity for kinetic energy; Russian Phonk builds identity around a modal anchor. This harmonic divergence is clearly legible in the chromagram visualisations and forms the foundation for the classifier’s ability to distinguish them in the Machine Learning section."
+  },
+  {
+    "objectID": "classification.html",
+    "href": "classification.html",
+    "title": "Classification",
+    "section": "",
+    "text": "The central question of this portfolio is whether Brazilian and Russian Phonk are statistically distinguishable, not just by ear, but computationally, using the same audio features available through the Spotify API. To answer this, a supervised machine learning classifier was trained on the corpus."
+  },
+  {
+    "objectID": "classification.html#can-a-machine-hear-the-difference",
+    "href": "classification.html#can-a-machine-hear-the-difference",
+    "title": "Classification",
+    "section": "",
+    "text": "The central question of this portfolio is whether Brazilian and Russian Phonk are statistically distinguishable, not just by ear, but computationally, using the same audio features available through the Spotify API. To answer this, a supervised machine learning classifier was trained on the corpus."
+  },
+  {
+    "objectID": "classification.html#methodology",
+    "href": "classification.html#methodology",
+    "title": "Classification",
+    "section": "Methodology",
+    "text": "Methodology\n\nWhy Random Forest?\nA Random Forest algorithm was chosen because it works well with small datasets (N = 114). Some algorithms risk memorising the training data too closely and then failing on new tracks. Random Forest avoids this by using bagging: it trains many separate decision trees on random subsets of the data and then combines their votes. This makes the results more reliable.\nValidation: A 10-fold cross-validation was used. The data was split into 10 subsets, and the model was trained and tested 10 times, each time holding out a different subset. This gives a more honest picture of how the model would perform on new data.\n\n\nThree-Stage Model Development\n\n\n\n\n\n\n\n\n\nStage\nStrategy\nAccuracy\nKappa\n\n\n\n\n1. Baseline\n9 original Spotify features\n86.5%\n0.73\n\n\n2. Refined\nFeature selection (removing noisy features)\n90.0%\n0.80\n\n\n3. Final\nFeature engineering (Aggression = Energy x Tempo)\n86.8%\n0.74\n\n\n\nThe Kappa statistic adjusts for the possibility that the model got lucky by chance. A Kappa of 0.80 is considered excellent. The slight drop from Stage 2 to Stage 3 is a known issue called over-parameterisation: adding extra variables to a small dataset can introduce noise, even if those variables are musically meaningful."
+  },
+  {
+    "objectID": "classification.html#feature-importance-what-makes-phonk-phonk",
+    "href": "classification.html#feature-importance-what-makes-phonk-phonk",
+    "title": "Classification",
+    "section": "Feature Importance: What Makes Phonk “Phonk”?",
+    "text": "Feature Importance: What Makes Phonk “Phonk”?\nThe plot below shows which acoustic features the Random Forest relied on most to distinguish the two subgenres. More important features appear higher on the chart.\n\n\n\nFeature Importance\n\n\n\nInterpretation\nTempo emerges as the single most important feature — a direct confirmation of the tempo distribution analysis in the Loudness & Rhythm section. The extraordinary clustering of Brazilian Phonk around 130 BPM is so reliable that the model can use it almost as a rule: “if tempo ≈ 130, classify as Brazilian.”\nLoudness ranks second, consistent with Brazilian Phonk’s compression-heavy mastering culture.\nThe engineered Aggression feature (Energy × Tempo) ranks highly despite the model’s slight accuracy dip — validating the musicological theory that Brazilian Phonk is defined by the combination of high speed and high energy, not either feature alone."
+  },
+  {
+    "objectID": "classification.html#class-specific-performance",
+    "href": "classification.html#class-specific-performance",
+    "title": "Classification",
+    "section": "Class-Specific Performance",
+    "text": "Class-Specific Performance\n\n\n\nGenre\nCorrect\nErrors\nAccuracy\n\n\n\n\n🇧🇷 Brazilian Phonk\n50\n7\n87.7%\n\n\n🇷🇺 Russian Drift Phonk\n47\n10\n82.5%\n\n\n\nBrazilian Phonk is easier to classify because its production style is so consistent. Russian Phonk is harder because it is a more experimental subgenre with no fixed rules, and some tracks end up sounding closer to the Brazilian style than to the Russian average.\nTogether, the classifier and the PCA tell the same story: the two subgenres are computationally distinct, but Russian Drift Phonk is the more varied and open of the two."
+  },
+  {
+    "objectID": "classification.html#unsupervised-validation-pca-cluster-plot",
+    "href": "classification.html#unsupervised-validation-pca-cluster-plot",
+    "title": "Classification",
+    "section": "Unsupervised Validation: PCA Cluster Plot",
+    "text": "Unsupervised Validation: PCA Cluster Plot\nAs an independent check, Principal Component Analysis (PCA) was used to visualise the corpus in 2D — without telling the algorithm which tracks belong to which genre. If the two subgenres are acoustically distinct, they should naturally separate in PCA space.\n\n\n\nPCA Cluster Plot\n\n\n\nInterpretation\nThe PCA plot confirms the classifier’s findings from a completely unsupervised perspective. The Brazilian Phonk cluster (green) is tight and well-separated — a reflection of its stylistic homogeneity. The Russian Phonk cluster (blue/grey) is more diffuse, with some overlap near the centre of the feature space.\nThis overlap in the centre corresponds precisely to the 17.5% misclassification rate for Russian tracks. The PCA tells us why the model sometimes gets it wrong: some Russian tracks are stylistically closer to the Brazilian norm than to the Russian mean — likely tracks where producers were consciously borrowing Brazilian elements.\nTogether, the supervised classifier and unsupervised PCA tell a consistent story: the two subgenres are computationally distinct, but Russian Drift Phonk is the more internally diverse and stylistically fluid of the two."
+  },
+  {
+    "objectID": "conclusion.html",
+    "href": "conclusion.html",
+    "title": "Conclusion",
+    "section": "",
+    "text": "This project tried to answer one main question. Can computer analysis capture the differences between Brazilian and Russian Phonk? [cite_start]The answer is a clear yes, but there are some important details[cite: 66]. [cite_start]By looking at harmony, loudness, tempo, rhythm, texture, and machine learning, we see a consistent pattern[cite: 67].\n\n\n\n1. Harmony is very important for defining these genres, but in opposite ways.\n[cite_start]The chroma analysis showed that Brazilian Phonk does not focus on harmony[cite: 68]. [cite_start]Its energy is spread across all pitches in quick bursts, so there is no main musical key[cite: 68]. [cite_start]On the other hand, Russian Drift Phonk is firmly anchored to a clear F# Minor key the whole time[cite: 69]. [cite_start]This is done on purpose[cite: 70]. [cite_start]Russian producers use harmony to tell a story, while Brazilian producers just use it for sound texture[cite: 70].\n2. Tempo is the biggest difference.\n[cite_start]It is amazing that Brazilian Phonk almost always stays around 130 BPM, especially since the genre has no official rules[cite: 71]. [cite_start]This happened naturally through community feedback and streaming data[cite: 72]. [cite_start]Producers who strayed from 130 BPM simply got fewer streams[cite: 72]. [cite_start]This is a great example of how platform algorithms indirectly shape how a genre sounds[cite: 73]. [cite_start]Meanwhile, Russian Phonk has a very wide tempo range of 80 to 180 BPM[cite: 74]. [cite_start]This makes sense because it started with car-culture video editors[cite: 74]. [cite_start]They needed tracks that felt intense, not tracks that followed standard dance rules[cite: 74].\n3. Rhythm and sound texture show different goals.\n[cite_start]By looking at rhythmic peaks, we can see that Brazilian Phonk keeps a constant wall of sound[cite: 138]. [cite_start]It relies on a non-stop rhythmic loop with no quiet parts or real breaks[cite: 139]. [cite_start]The Russian track breathes a lot more[cite: 148]. [cite_start]It uses quieter intros, slow build-ups, and heavy drops to boost the energy[cite: 143]. We also looked at sound texture over time. [cite_start]Brazilian Phonk keeps the same texture on purpose[cite: 167]. [cite_start]Russian Drift Phonk actually changes its texture to create a sense of movement and drama[cite: 167].\n4. The computer model works, but Russian Phonk is harder to pin down.\n[cite_start]The machine learning model was 90% accurate on our 114 tracks, which is a strong result[cite: 75]. [cite_start]The 10% error rate mostly came from mixing up Russian Phonk tracks[cite: 76]. [cite_start]This is not a failure, but actually a really cool finding[cite: 76]. [cite_start]It shows that Russian Drift Phonk is very open[cite: 77]. [cite_start]It borrows sounds from other genres, including Brazilian Phonk, while still keeping its own vibe[cite: 77]. [cite_start]This is totally normal for an experimental, internet-driven genre that does not have strict rules yet[cite: 78].\n\n\n\n\n\n\n\n\n\n\n\nAudience\nApplication\n\n\n\n\nStreaming platforms\n[cite_start]Better tags and more accurate recommendations for Phonk listeners[cite: 80].\n\n\nMusic researchers\n[cite_start]A new way to study how online communities change music styles[cite: 81].\n\n\nProducers\n[cite_start]Real data on what audio features make each style popular[cite: 82].\n\n\nPlaylist curators\n[cite_start]A math-based way to separate Brazilian and Russian Phonk for mood playlists[cite: 83].\n\n\n\n\n\n\n\n[cite_start]This project completely changed how I think about my own tracks[cite: 84]. [cite_start]Seeing MONTAGEM REBOLA as just vertical noise on a chart made a lot of sense[cite: 85]. [cite_start]I realized I made a track with no harmony because the genre’s rules simply do not want it[cite: 85].\n[cite_start]My Brazilian track looks very typical for its genre in the computer data[cite: 86]. However, the Russian track S.X.N.D. N.X.D.E.S. is actually pretty unusual for Russian Phonk because it was so easy to classify[cite: 87]. [cite_start]Knowing this gives me a fresh way to look at my own creative choices[cite: 87]. [cite_start]Using computers to study music does not replace actually listening to it, but it does help us see the hidden rules behind what we hear[cite: 88]. [cite_start]This is especially true for Phonk, since it is a genre born on the internet, shaped by algorithms, and defined by community feedback[cite: 89]."
+  },
+  {
+    "objectID": "conclusion.html#key-findings",
+    "href": "conclusion.html#key-findings",
+    "title": "Conclusion",
+    "section": "",
+    "text": "This project tried to answer one main question. Can computer analysis capture the differences between Brazilian and Russian Phonk? [cite_start]The answer is a clear yes, but there are some important details[cite: 66]. [cite_start]By looking at harmony, loudness, tempo, rhythm, texture, and machine learning, we see a consistent pattern[cite: 67].\n\n\n\n1. Harmony is very important for defining these genres, but in opposite ways.\n[cite_start]The chroma analysis showed that Brazilian Phonk does not focus on harmony[cite: 68]. [cite_start]Its energy is spread across all pitches in quick bursts, so there is no main musical key[cite: 68]. [cite_start]On the other hand, Russian Drift Phonk is firmly anchored to a clear F# Minor key the whole time[cite: 69]. [cite_start]This is done on purpose[cite: 70]. [cite_start]Russian producers use harmony to tell a story, while Brazilian producers just use it for sound texture[cite: 70].\n2. Tempo is the biggest difference.\n[cite_start]It is amazing that Brazilian Phonk almost always stays around 130 BPM, especially since the genre has no official rules[cite: 71]. [cite_start]This happened naturally through community feedback and streaming data[cite: 72]. [cite_start]Producers who strayed from 130 BPM simply got fewer streams[cite: 72]. [cite_start]This is a great example of how platform algorithms indirectly shape how a genre sounds[cite: 73]. [cite_start]Meanwhile, Russian Phonk has a very wide tempo range of 80 to 180 BPM[cite: 74]. [cite_start]This makes sense because it started with car-culture video editors[cite: 74]. [cite_start]They needed tracks that felt intense, not tracks that followed standard dance rules[cite: 74].\n3. Rhythm and sound texture show different goals.\n[cite_start]By looking at rhythmic peaks, we can see that Brazilian Phonk keeps a constant wall of sound[cite: 138]. [cite_start]It relies on a non-stop rhythmic loop with no quiet parts or real breaks[cite: 139]. [cite_start]The Russian track breathes a lot more[cite: 148]. [cite_start]It uses quieter intros, slow build-ups, and heavy drops to boost the energy[cite: 143]. We also looked at sound texture over time. [cite_start]Brazilian Phonk keeps the same texture on purpose[cite: 167]. [cite_start]Russian Drift Phonk actually changes its texture to create a sense of movement and drama[cite: 167].\n4. The computer model works, but Russian Phonk is harder to pin down.\n[cite_start]The machine learning model was 90% accurate on our 114 tracks, which is a strong result[cite: 75]. [cite_start]The 10% error rate mostly came from mixing up Russian Phonk tracks[cite: 76]. [cite_start]This is not a failure, but actually a really cool finding[cite: 76]. [cite_start]It shows that Russian Drift Phonk is very open[cite: 77]. [cite_start]It borrows sounds from other genres, including Brazilian Phonk, while still keeping its own vibe[cite: 77]. [cite_start]This is totally normal for an experimental, internet-driven genre that does not have strict rules yet[cite: 78].\n\n\n\n\n\n\n\n\n\n\n\nAudience\nApplication\n\n\n\n\nStreaming platforms\n[cite_start]Better tags and more accurate recommendations for Phonk listeners[cite: 80].\n\n\nMusic researchers\n[cite_start]A new way to study how online communities change music styles[cite: 81].\n\n\nProducers\n[cite_start]Real data on what audio features make each style popular[cite: 82].\n\n\nPlaylist curators\n[cite_start]A math-based way to separate Brazilian and Russian Phonk for mood playlists[cite: 83].\n\n\n\n\n\n\n\n[cite_start]This project completely changed how I think about my own tracks[cite: 84]. [cite_start]Seeing MONTAGEM REBOLA as just vertical noise on a chart made a lot of sense[cite: 85]. [cite_start]I realized I made a track with no harmony because the genre’s rules simply do not want it[cite: 85].\n[cite_start]My Brazilian track looks very typical for its genre in the computer data[cite: 86]. However, the Russian track S.X.N.D. N.X.D.E.S. is actually pretty unusual for Russian Phonk because it was so easy to classify[cite: 87]. [cite_start]Knowing this gives me a fresh way to look at my own creative choices[cite: 87]. [cite_start]Using computers to study music does not replace actually listening to it, but it does help us see the hidden rules behind what we hear[cite: 88]. [cite_start]This is especially true for Phonk, since it is a genre born on the internet, shaped by algorithms, and defined by community feedback[cite: 89]."
+  },
+  {
+    "objectID": "chroma-features.html#pitch-and-harmony",
+    "href": "chroma-features.html#pitch-and-harmony",
+    "title": "Chroma Features",
+    "section": "",
+    "text": "A chromagram shows how the energy in a track is spread across the 12 pitch classes (C, C#, D, and so on) over time. Instead of showing exact frequencies, it collapses everything into a single octave. This makes it easier to spot harmonic patterns, like a repeated chord or a consistent key center, across a full track.\n\n\nThe x-axis shows time (in seconds). The y-axis shows the 12 pitch classes, from C at the bottom to B at the top. Brighter colors mean more energy at that pitch class at that moment.\n\nBright vertical streaks across many pitch classes at once suggest a noisy, rhythmic hit with no clear harmonic content\nBright horizontal bands running across the full width suggest a stable pitch that repeats throughout the track"
+  },
+  {
+    "objectID": "chroma-features.html#montagem-rebola-brazilian-phonk",
+    "href": "chroma-features.html#montagem-rebola-brazilian-phonk",
+    "title": "Chroma Features",
+    "section": "🇧🇷 MONTAGEM REBOLA — Brazilian Phonk",
+    "text": "🇧🇷 MONTAGEM REBOLA — Brazilian Phonk\n\n\n\n\n\nChroma feature analysis: Montagem Rebola\n\n\n\n\nThe chromagram for MONTAGEM REBOLA is full of bright vertical flashes across nearly all pitch classes at the same time. There is no clear horizontal band, meaning no single pitch is held consistently. The track has no real harmonic center.\nThis is typical for Brazilian Phonk. The genre is built around hard-hitting loops and rhythmic impact, not melody. The bursts you see correspond to those loop hits, which activate all frequencies at once rather than targeting a specific note. In course terms, this pattern matches H-topic H5, which describes the kind of noise-heavy, chord-free sound found in high-energy rap-adjacent genres.\nThe intensity is also consistent from start to finish. There are no quieter sections or melodic breaks. The track is designed to keep energy high the whole way through, and the chromagram shows that clearly."
+  },
+  {
+    "objectID": "chroma-features.html#s.x.n.d.-n.x.d.e.s.-russian-drift-phonk",
+    "href": "chroma-features.html#s.x.n.d.-n.x.d.e.s.-russian-drift-phonk",
+    "title": "Chroma Features",
+    "section": "🇷🇺 S.X.N.D. N.X.D.E.S. — Russian Drift Phonk",
+    "text": "🇷🇺 S.X.N.D. N.X.D.E.S. — Russian Drift Phonk\n\n\n\n\n\nChroma feature analysis: S.X.N.D. N.X.D.E.S.\n\n\n\n\nThe Russian track looks completely different. Instead of scattered vertical bursts, this chromagram shows clear horizontal bands, most visibly at F# and D, that run across the full track. This is the signature of a track with a strong, consistent key center.\nThe dominance of F# and D points to F# Minor, a key often linked to a dark or tense mood. This is not a coincidence. Russian Drift Phonk is built around looped cowbell melodies and minor-key synth lines that create a cinematic atmosphere. The cowbell loop in this track plays the same short figure on repeat, which is exactly why F# shows up so clearly.\nIf you look closely, the brightness of the bands shifts slightly at certain points. These shifts correspond to structural moments, like the intro giving way to the main section, or a brief breakdown. The track is still repetitive by design, but these small changes create a sense of tension and release over time."
+  },
+  {
+    "objectID": "chroma-features.html#side-by-side-comparison",
+    "href": "chroma-features.html#side-by-side-comparison",
+    "title": "Chroma Features",
+    "section": "Side-by-Side Comparison",
+    "text": "Side-by-Side Comparison\n\n\n\n\n\n\n\n\n\nMONTAGEM REBOLA (Brazil)\nS.X.N.D. N.X.D.E.S. (Russia)\n\n\n\n\nPattern\nVertical bursts across all pitches\nHorizontal bands on F# and D\n\n\nKey center\nNone\nF# Minor\n\n\nStructure\nUniform energy throughout\nSubtle shifts between sections\n\n\nPriority\nRhythmic impact\nMelodic atmosphere\n\n\n\nThe contrast between these two chromagrams captures something important about the two subgenres. Brazilian Phonk does not rely on harmony at all. Russian Drift Phonk uses a repeated melodic loop to build its identity. This harmonic difference also turns out to be one of the things the machine learning classifier picks up on, which you can read about in the Classification section."
+  },
+  {
+    "objectID": "chroma-features.html#comparison",
+    "href": "chroma-features.html#comparison",
+    "title": "Chroma Features",
+    "section": "Comparison",
+    "text": "Comparison\n\n\n\n\n\n\n\n\n\nMONTAGEM REBOLA (Brazil)\nS.X.N.D. N.X.D.E.S. (Russia)\n\n\n\n\nPattern\nVertical bursts across all pitches\nHorizontal bands on F# and D\n\n\nKey center\nNone\nF# Minor\n\n\nStructure\nUniform energy throughout\nSubtle shifts between sections\n\n\nPriority\nRhythmic impact\nMelodic atmosphere\n\n\n\nThe contrast between these two chromagrams captures something important about the two subgenres. Brazilian Phonk does not rely on harmony at all. Russian Drift Phonk uses a repeated melodic loop to build its identity. This harmonic difference also turns out to be something the machine learning classifier picks up on, as you can read in the Classification section."
+  },
+  {
+    "objectID": "index.html#the-corpus",
+    "href": "index.html#the-corpus",
+    "title": "Phonk Outlier Analysis: Brazil vs. Russia",
+    "section": "The Corpus",
+    "text": "The Corpus\nFor this project, I submitted two Spotify playlists to the class corpus, each representing one of these subgenres. Together they contain 114 tracks, split 57/57 between Brazilian Phonk and Russian Drift Phonk.\nThe two playlists were chosen because they represent opposite ends of the Phonk spectrum. This contrast makes them a good subject for computational analysis: if the two styles are truly different, the data should reflect that.\nThe central question of this portfolio is:\n\nCan computational musicology capture the difference between Brazilian and Russian Phonk, and if so, which audio features are most useful for telling them apart?"
+  },
+  {
+    "objectID": "loudness.html#tempo-and-loudness",
+    "href": "loudness.html#tempo-and-loudness",
+    "title": "Loudness & Rhythm",
+    "section": "",
+    "text": "This section looks at two features that shape how Phonk feels to a listener: tempo (how fast the track moves) and loudness (how hard it hits). In Phonk, these are not just technical measurements. They are creative choices that define the mood and purpose of a track."
+  },
+  {
+    "objectID": "loudness.html#loudness-and-energy",
+    "href": "loudness.html#loudness-and-energy",
+    "title": "Loudness & Rhythm",
+    "section": "Loudness and Energy",
+    "text": "Loudness and Energy\n\n\n\n\n\n\n\n\n\nLoudness is measured in dBFS, where values closer to 0 mean louder. Energy is Spotify’s score for how intense a track feels, ranging from 0 to 1.\nBrazilian Phonk tends to score higher on both. Tracks are heavily compressed and mastered to sound as loud and punchy as possible, because they are made for gym playlists and high-energy DJ sets where volume matters.\nRussian Phonk is still loud by most standards, but it leaves a bit more room for dynamics. The darker, cinematic style sometimes calls for quieter moments, like a slow intro before the main part kicks in."
+  },
+  {
+    "objectID": "classification.html#feature-importance-and-cluster-structure",
+    "href": "classification.html#feature-importance-and-cluster-structure",
+    "title": "Classification",
+    "section": "Feature Importance and Cluster Structure",
+    "text": "Feature Importance and Cluster Structure\n\n\n\nWhat the Model Used\n\n\n\n\n\n\n\n\n\nTempo is the most important feature, which directly confirms what the tempo distribution showed: Brazilian Phonk clusters so tightly at 130 BPM that the model can almost use it as a rule on its own.\nLoudness ranks second, fitting with Brazilian Phonk’s heavily compressed production style.\nThe engineered Aggression feature (Energy x Tempo) also ranks highly, supporting the idea that Brazilian Phonk is defined by the combination of high speed and high energy together.\n\n\n\nIndependent Check: PCA\n\n\n\n\n\n\n\n\n\nPCA reduces all audio features to two dimensions so we can see the corpus visually, without telling the algorithm which tracks belong to which genre.\nThe Brazilian Phonk cluster is tight and clearly separated, reflecting how consistent and formula-driven that subgenre is. The Russian Phonk cluster is more spread out, with some tracks drifting toward the Brazilian cluster in the middle.\nThis overlap explains the higher misclassification rate for Russian tracks. Some Russian producers borrow sonic elements from Brazilian Phonk, pushing those tracks into the grey area between clusters."
+  },
+  {
+    "objectID": "timbre.html",
+    "href": "timbre.html",
+    "title": "Timbre Features",
+    "section": "",
+    "text": "Timbre is what makes two instruments playing the same note sound different. It is the texture and color of a sound. In music production, timbre is what separates a dense, wall-of-sound drop from a sparse, open breakdown. To measure it computationally, we use Mel-Frequency Cepstral Coefficients (MFCCs), which capture how energy is distributed across frequency bands over time.\nA self-similarity matrix (SSM) takes those MFCC values and compares every moment in a track to every other moment. Sections that sound similar to each other show up as bright squares along the diagonal. Repeated sections show up as bright off-diagonal blocks."
+  },
+  {
+    "objectID": "timbre.html#timbre-features",
+    "href": "timbre.html#timbre-features",
+    "title": "Timbre Features",
+    "section": "",
+    "text": "Timbre is what makes two instruments playing the same note sound different. It is the texture and color of a sound. In music production, timbre is what separates a dense, wall-of-sound drop from a sparse, open breakdown. To measure it computationally, we use Mel-Frequency Cepstral Coefficients (MFCCs), which capture how energy is distributed across frequency bands over time.\nA self-similarity matrix (SSM) takes those MFCC values and compares every moment in a track to every other moment. Sections that sound similar to each other show up as bright squares along the diagonal. Repeated sections show up as bright off-diagonal blocks."
+  },
+  {
+    "objectID": "timbre.html#montagem-rebola",
+    "href": "timbre.html#montagem-rebola",
+    "title": "Timbre Features",
+    "section": "🇧🇷 MONTAGEM REBOLA",
+    "text": "🇧🇷 MONTAGEM REBOLA\n\n\n\n\n\nSelf-similarity matrix: Montagem Rebola (MFCC-based)\n\n\n\n\nThe SSM for MONTAGEM REBOLA is expected to show a strongly uniform structure. Because the track is built from a single repeating loop with minimal variation, nearly every section should look similar to every other section. The bright diagonal confirms timbral consistency; any bright off-diagonal blocks reveal where the loop repeats."
+  },
+  {
+    "objectID": "timbre.html#s.x.n.d.-n.x.d.e.s.",
+    "href": "timbre.html#s.x.n.d.-n.x.d.e.s.",
+    "title": "Timbre Features",
+    "section": "🇷🇺 S.X.N.D. N.X.D.E.S.",
+    "text": "🇷🇺 S.X.N.D. N.X.D.E.S.\n\n\n\n\n\nSelf-similarity matrix: S.X.N.D. N.X.D.E.S. (MFCC-based)\n\n\n\n\nThe Russian track is expected to show more structural variation in its SSM. The cinematic, tension-and-release architecture of Russian Drift Phonk means sections change more noticeably over time. Look for distinct rectangular blocks that separate the intro, main section, and any breakdown passages. These would confirm that the track has a deliberate structural arc rather than pure loop repetition."
+  },
+  {
+    "objectID": "timbre.html#what-timbre-tells-us",
+    "href": "timbre.html#what-timbre-tells-us",
+    "title": "Timbre Features",
+    "section": "What Timbre Tells Us",
+    "text": "What Timbre Tells Us\nComparing the two SSMs reveals something the chromagrams and tempo charts cannot: how the texture of each track evolves over time. Brazilian Phonk is timbrally static by design. Russian Drift Phonk uses timbral shifts to create a sense of movement and drama. This structural difference is one more way the two subgenres diverge at a computational level."
+  },
+  {
+    "objectID": "temporal.html",
+    "href": "temporal.html",
+    "title": "Temporal Features",
+    "section": "",
+    "text": "This section looks at the rhythmic and structural patterns in the two tracks over time. Specifically, it uses a novelty function to detect moments where the sound changes noticeably. Peaks in the novelty function correspond to onsets: a beat hitting, a new element entering, or a structural transition.\nComparing the novelty functions of the two tracks shows how differently they are structured rhythmically."
+  },
+  {
+    "objectID": "temporal.html#temporal-features",
+    "href": "temporal.html#temporal-features",
+    "title": "Temporal Features",
+    "section": "",
+    "text": "This section looks at the rhythmic and structural patterns in the two tracks over time. Specifically, it uses a novelty function to detect moments where the sound changes noticeably. Peaks in the novelty function correspond to onsets: a beat hitting, a new element entering, or a structural transition.\nComparing the novelty functions of the two tracks shows how differently they are structured rhythmically."
+  },
+  {
+    "objectID": "temporal.html#montagem-rebola-novelty-function",
+    "href": "temporal.html#montagem-rebola-novelty-function",
+    "title": "Temporal Features",
+    "section": "🇧🇷 MONTAGEM REBOLA — Novelty Function",
+    "text": "🇧🇷 MONTAGEM REBOLA — Novelty Function\n\n\n\n\n\nSpectral novelty function: Montagem Rebola\n\n\n\n\nThe novelty function for MONTAGEM REBOLA is expected to show dense, evenly spaced peaks throughout the track. This would confirm what the chromagram already suggested: the track is built on a relentlessly consistent rhythmic loop with no real quiet sections or structural breaks. Every beat hits with roughly the same force, which is exactly what Brazilian Phonk is designed to do."
+  },
+  {
+    "objectID": "temporal.html#s.x.n.d.-n.x.d.e.s.-novelty-function",
+    "href": "temporal.html#s.x.n.d.-n.x.d.e.s.-novelty-function",
+    "title": "Temporal Features",
+    "section": "🇷🇺 S.X.N.D. N.X.D.E.S. — Novelty Function",
+    "text": "🇷🇺 S.X.N.D. N.X.D.E.S. — Novelty Function\n\n\n\n\n\nSpectral novelty function: S.X.N.D. N.X.D.E.S.\n\n\n\n\nThe Russian track is expected to show more variation in peak height and spacing. Russian Drift Phonk uses quieter intro sections, gradual build-ups, and drop moments where the energy suddenly increases. These would show up as clusters of larger peaks at structural transition points, with calmer stretches in between. This kind of rhythmic variance is part of what makes the genre feel more cinematic compared to the Brazilian style."
+  },
+  {
+    "objectID": "temporal.html#comparison",
+    "href": "temporal.html#comparison",
+    "title": "Temporal Features",
+    "section": "Comparison",
+    "text": "Comparison\n\n\n\n\n\nNovelty functions compared side by side\n\n\n\n\nShown together, the difference in rhythmic structure becomes clear. The Brazilian track maintains a steady wall of onsets. The Russian track breathes more, with moments of relative calm that make the high-energy sections hit harder by contrast. This is the temporal signature of the two subgenres: one is a machine, the other tells a story."
+  }
+]

@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.34">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Conclusion – Phonk Outlier Analysis</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-56a1e3db71204dfbc8a885484c5b40f0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-00feface57a40fb7a06c8694f9a70c45.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Phonk Outlier Analysis</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./corpus.html"> 
+<span class="menu-text">Corpus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./chroma-features.html"> 
+<span class="menu-text">Chroma Features</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./loudness.html"> 
+<span class="menu-text">Loudness &amp; Rhythm</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./timbre.html"> 
+<span class="menu-text">Timbre</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./temporal.html"> 
+<span class="menu-text">Temporal</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./classification.html"> 
+<span class="menu-text">Classification</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./conclusion.html" aria-current="page"> 
+<span class="menu-text">Conclusion</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/rickyspeijker"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link active" data-scroll-target="#key-findings">Key Findings</a>
+  <ul class="collapse">
+  <li><a href="#what-the-analysis-revealed" id="toc-what-the-analysis-revealed" class="nav-link" data-scroll-target="#what-the-analysis-revealed">What the Analysis Revealed</a></li>
+  <li><a href="#who-could-benefit-from-this" id="toc-who-could-benefit-from-this" class="nav-link" data-scroll-target="#who-could-benefit-from-this">Who Could Benefit From This?</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Conclusion</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<p>This project tried to answer one main question. Can computer analysis capture the differences between Brazilian and Russian Phonk? [cite_start]The answer is a clear yes, but there are some important details[cite: 66]. [cite_start]By looking at harmony, loudness, tempo, rhythm, texture, and machine learning, we see a consistent pattern[cite: 67].</p>
+<hr>
+<section id="what-the-analysis-revealed" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-analysis-revealed">What the Analysis Revealed</h3>
+<p><strong>1. Harmony is very important for defining these genres, but in opposite ways.</strong></p>
+<p>[cite_start]The chroma analysis showed that Brazilian Phonk does not focus on harmony[cite: 68]. [cite_start]Its energy is spread across all pitches in quick bursts, so there is no main musical key[cite: 68]. [cite_start]On the other hand, Russian Drift Phonk is firmly anchored to a clear F# Minor key the whole time[cite: 69]. [cite_start]This is done on purpose[cite: 70]. [cite_start]Russian producers use harmony to tell a story, while Brazilian producers just use it for sound texture[cite: 70].</p>
+<p><strong>2. Tempo is the biggest difference.</strong></p>
+<p>[cite_start]It is amazing that Brazilian Phonk almost always stays around 130 BPM, especially since the genre has no official rules[cite: 71]. [cite_start]This happened naturally through community feedback and streaming data[cite: 72]. [cite_start]Producers who strayed from 130 BPM simply got fewer streams[cite: 72]. [cite_start]This is a great example of how platform algorithms indirectly shape how a genre sounds[cite: 73]. [cite_start]Meanwhile, Russian Phonk has a very wide tempo range of 80 to 180 BPM[cite: 74]. [cite_start]This makes sense because it started with car-culture video editors[cite: 74]. [cite_start]They needed tracks that felt intense, not tracks that followed standard dance rules[cite: 74].</p>
+<p><strong>3. Rhythm and sound texture show different goals.</strong></p>
+<p>[cite_start]By looking at rhythmic peaks, we can see that Brazilian Phonk keeps a constant wall of sound[cite: 138]. [cite_start]It relies on a non-stop rhythmic loop with no quiet parts or real breaks[cite: 139]. [cite_start]The Russian track breathes a lot more[cite: 148]. [cite_start]It uses quieter intros, slow build-ups, and heavy drops to boost the energy[cite: 143]. We also looked at sound texture over time. [cite_start]Brazilian Phonk keeps the same texture on purpose[cite: 167]. [cite_start]Russian Drift Phonk actually changes its texture to create a sense of movement and drama[cite: 167].</p>
+<p><strong>4. The computer model works, but Russian Phonk is harder to pin down.</strong></p>
+<p>[cite_start]The machine learning model was 90% accurate on our 114 tracks, which is a strong result[cite: 75]. [cite_start]The 10% error rate mostly came from mixing up Russian Phonk tracks[cite: 76]. [cite_start]This is not a failure, but actually a really cool finding[cite: 76]. [cite_start]It shows that Russian Drift Phonk is very open[cite: 77]. [cite_start]It borrows sounds from other genres, including Brazilian Phonk, while still keeping its own vibe[cite: 77]. [cite_start]This is totally normal for an experimental, internet-driven genre that does not have strict rules yet[cite: 78].</p>
+<hr>
+</section>
+<section id="who-could-benefit-from-this" class="level3">
+<h3 class="anchored" data-anchor-id="who-could-benefit-from-this">Who Could Benefit From This?</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Audience</th>
+<th style="text-align: left;">Application</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Streaming platforms</strong></td>
+<td style="text-align: left;">[cite_start]Better tags and more accurate recommendations for Phonk listeners[cite: 80].</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Music researchers</strong></td>
+<td style="text-align: left;">[cite_start]A new way to study how online communities change music styles[cite: 81].</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Producers</strong></td>
+<td style="text-align: left;">[cite_start]Real data on what audio features make each style popular[cite: 82].</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Playlist curators</strong></td>
+<td style="text-align: left;">[cite_start]A math-based way to separate Brazilian and Russian Phonk for mood playlists[cite: 83].</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="reflection" class="level3">
+<h3 class="anchored" data-anchor-id="reflection">Reflection</h3>
+<p>[cite_start]This project completely changed how I think about my own tracks[cite: 84]. [cite_start]Seeing <em>MONTAGEM REBOLA</em> as just vertical noise on a chart made a lot of sense[cite: 85]. [cite_start]I realized I made a track with no harmony because the genre’s rules simply do not want it[cite: 85].</p>
+<p>[cite_start]My Brazilian track looks very typical for its genre in the computer data[cite: 86]. However, the Russian track <em>S.X.N.D. N.X.D.E.S.</em> is actually pretty unusual for Russian Phonk because it was so easy to classify[cite: 87]. [cite_start]Knowing this gives me a fresh way to look at my own creative choices[cite: 87]. [cite_start]Using computers to study music does not replace actually listening to it, but it does help us see the hidden rules behind what we hear[cite: 88]. [cite_start]This is especially true for Phonk, since it is a genre born on the internet, shaped by algorithms, and defined by community feedback[cite: 89].</p>
+
+
+<!-- -->
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Conclusion"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Findings</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>This project tried to answer one main question. Can computer analysis capture the differences between Brazilian and Russian Phonk? <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>The answer is a clear yes, but there are some important details<span class="co">[</span><span class="ot">cite: 66</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>By looking at harmony, loudness, tempo, rhythm, texture, and machine learning, we see a consistent pattern<span class="co">[</span><span class="ot">cite: 67</span><span class="co">]</span>.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">### What the Analysis Revealed</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>**1. Harmony is very important for defining these genres, but in opposite ways.**</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>The chroma analysis showed that Brazilian Phonk does not focus on harmony<span class="co">[</span><span class="ot">cite: 68</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>Its energy is spread across all pitches in quick bursts, so there is no main musical key<span class="co">[</span><span class="ot">cite: 68</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>On the other hand, Russian Drift Phonk is firmly anchored to a clear F# Minor key the whole time<span class="co">[</span><span class="ot">cite: 69</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>This is done on purpose<span class="co">[</span><span class="ot">cite: 70</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>Russian producers use harmony to tell a story, while Brazilian producers just use it for sound texture<span class="co">[</span><span class="ot">cite: 70</span><span class="co">]</span>.</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>**2. Tempo is the biggest difference.**</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>It is amazing that Brazilian Phonk almost always stays around 130 BPM, especially since the genre has no official rules<span class="co">[</span><span class="ot">cite: 71</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>This happened naturally through community feedback and streaming data<span class="co">[</span><span class="ot">cite: 72</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>Producers who strayed from 130 BPM simply got fewer streams<span class="co">[</span><span class="ot">cite: 72</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>This is a great example of how platform algorithms indirectly shape how a genre sounds<span class="co">[</span><span class="ot">cite: 73</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>Meanwhile, Russian Phonk has a very wide tempo range of 80 to 180 BPM<span class="co">[</span><span class="ot">cite: 74</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>This makes sense because it started with car-culture video editors<span class="co">[</span><span class="ot">cite: 74</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>They needed tracks that felt intense, not tracks that followed standard dance rules<span class="co">[</span><span class="ot">cite: 74</span><span class="co">]</span>.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>**3. Rhythm and sound texture show different goals.**</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>By looking at rhythmic peaks, we can see that Brazilian Phonk keeps a constant wall of sound<span class="co">[</span><span class="ot">cite: 138</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>It relies on a non-stop rhythmic loop with no quiet parts or real breaks<span class="co">[</span><span class="ot">cite: 139</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>The Russian track breathes a lot more<span class="co">[</span><span class="ot">cite: 148</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>It uses quieter intros, slow build-ups, and heavy drops to boost the energy<span class="co">[</span><span class="ot">cite: 143</span><span class="co">]</span>. We also looked at sound texture over time. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>Brazilian Phonk keeps the same texture on purpose<span class="co">[</span><span class="ot">cite: 167</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>Russian Drift Phonk actually changes its texture to create a sense of movement and drama<span class="co">[</span><span class="ot">cite: 167</span><span class="co">]</span>.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>**4. The computer model works, but Russian Phonk is harder to pin down.**</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>The machine learning model was 90% accurate on our 114 tracks, which is a strong result<span class="co">[</span><span class="ot">cite: 75</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>The 10% error rate mostly came from mixing up Russian Phonk tracks<span class="co">[</span><span class="ot">cite: 76</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>This is not a failure, but actually a really cool finding<span class="co">[</span><span class="ot">cite: 76</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>It shows that Russian Drift Phonk is very open<span class="co">[</span><span class="ot">cite: 77</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>It borrows sounds from other genres, including Brazilian Phonk, while still keeping its own vibe<span class="co">[</span><span class="ot">cite: 77</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>This is totally normal for an experimental, internet-driven genre that does not have strict rules yet<span class="co">[</span><span class="ot">cite: 78</span><span class="co">]</span>.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">### Who Could Benefit From This?</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Audience <span class="pp">|</span> Application <span class="pp">|</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---|:---|</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Streaming platforms** <span class="pp">|</span> <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>Better tags and more accurate recommendations for Phonk listeners<span class="co">[</span><span class="ot">cite: 80</span><span class="co">]</span>. <span class="pp">|</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Music researchers** <span class="pp">|</span> <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>A new way to study how online communities change music styles<span class="co">[</span><span class="ot">cite: 81</span><span class="co">]</span>. <span class="pp">|</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Producers** <span class="pp">|</span> <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>Real data on what audio features make each style popular<span class="co">[</span><span class="ot">cite: 82</span><span class="co">]</span>. <span class="pp">|</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Playlist curators** <span class="pp">|</span> <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>A math-based way to separate Brazilian and Russian Phonk for mood playlists<span class="co">[</span><span class="ot">cite: 83</span><span class="co">]</span>. <span class="pp">|</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="fu">### Reflection</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>This project completely changed how I think about my own tracks<span class="co">[</span><span class="ot">cite: 84</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>Seeing *MONTAGEM REBOLA* as just vertical noise on a chart made a lot of sense<span class="co">[</span><span class="ot">cite: 85</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>I realized I made a track with no harmony because the genre's rules simply do not want it<span class="co">[</span><span class="ot">cite: 85</span><span class="co">]</span>. </span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>My Brazilian track looks very typical for its genre in the computer data<span class="co">[</span><span class="ot">cite: 86</span><span class="co">]</span>. However, the Russian track *S.X.N.D. N.X.D.E.S.* is actually pretty unusual for Russian Phonk because it was so easy to classify<span class="co">[</span><span class="ot">cite: 87</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>Knowing this gives me a fresh way to look at my own creative choices<span class="co">[</span><span class="ot">cite: 87</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>Using computers to study music does not replace actually listening to it, but it does help us see the hidden rules behind what we hear<span class="co">[</span><span class="ot">cite: 88</span><span class="co">]</span>. <span class="co">[</span><span class="ot">cite_start</span><span class="co">]</span>This is especially true for Phonk, since it is a genre born on the internet, shaped by algorithms, and defined by community feedback<span class="co">[</span><span class="ot">cite: 89</span><span class="co">]</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Computational Musicology Portfolio · University of Amsterdam</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Reanu Visser · 2026</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

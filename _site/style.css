@@ -1,0 +1,285 @@
+/* ============================================
+   PHONK PORTFOLIO — Custom Stylesheet
+   Dark, editorial, music-analytical aesthetic
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+/* --- Root variables --- */
+:root {
+  --bg-primary: #0d0d0f;
+  --bg-secondary: #141417;
+  --bg-card: #1a1a1f;
+  --accent-brazil: #e63946;
+  --accent-russia: #4895ef;
+  --accent-neutral: #f4a261;
+  --text-primary: #e8e8f0;
+  --text-muted: #888899;
+  --border-subtle: #2a2a35;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+/* --- Base --- */
+body {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-body) !important;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* --- Navigation bar --- */
+.navbar {
+  background-color: rgba(13, 13, 15, 0.95) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle) !important;
+  font-family: var(--font-display) !important;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.navbar-brand {
+  font-size: 1rem !important;
+  color: var(--text-primary) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.navbar .nav-link {
+  color: var(--text-muted) !important;
+  transition: color 0.2s ease;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--accent-brazil) !important;
+}
+
+/* --- Headings --- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display) !important;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-primary) !important;
+}
+
+h1 { font-size: 2.2rem; font-weight: 800; }
+h2 { 
+  font-size: 1.5rem; 
+  border-bottom: 1px solid var(--border-subtle); 
+  padding-bottom: 0.5rem; 
+  margin-top: 2.5rem;
+}
+h3 { font-size: 1.15rem; color: var(--accent-brazil) !important; font-weight: 600; }
+h4 { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-muted) !important; }
+
+/* --- Main content area --- */
+#quarto-content main {
+  max-width: 960px;
+  padding: 2rem 2.5rem;
+}
+
+/* --- Blockquote (callouts) --- */
+blockquote {
+  border-left: 3px solid var(--accent-brazil);
+  background: var(--bg-card);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-style: normal;
+}
+
+/* --- Tables --- */
+table {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+thead th {
+  background-color: var(--bg-card) !important;
+  color: var(--text-muted) !important;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--border-subtle);
+  font-family: var(--font-display);
+}
+
+tbody td {
+  padding: 0.55rem 0.9rem;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+}
+
+tbody tr:hover td {
+  background-color: var(--bg-card);
+}
+
+/* --- DT datatable overrides --- */
+.dataTables_wrapper {
+  background: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+}
+
+.dataTables_filter input,
+.dataTables_length select {
+  background: var(--bg-primary) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-primary) !important;
+  border-radius: 5px;
+  padding: 0.3rem 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.dataTables_info,
+.dataTables_filter label,
+.dataTables_length label {
+  color: var(--text-muted) !important;
+  font-size: 0.82rem;
+}
+
+.paginate_button {
+  color: var(--text-muted) !important;
+}
+
+.paginate_button.current {
+  background: var(--accent-brazil) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 4px;
+}
+
+/* --- Images --- */
+img {
+  border-radius: 8px;
+  max-width: 100%;
+  border: 1px solid var(--border-subtle);
+}
+
+/* --- Genre tags (Spotify-style badges) --- */
+.genre-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.9rem;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+.genre-tag.brazilian {
+  background-color: rgba(230, 57, 70, 0.15);
+  color: var(--accent-brazil);
+  border: 1px solid rgba(230, 57, 70, 0.3);
+}
+
+.genre-tag.russian {
+  background-color: rgba(72, 149, 239, 0.15);
+  color: var(--accent-russia);
+  border: 1px solid rgba(72, 149, 239, 0.3);
+}
+
+/* --- Code blocks --- */
+pre, code {
+  font-family: var(--font-mono) !important;
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  font-size: 0.83rem;
+  color: var(--accent-neutral) !important;
+}
+
+/* --- Horizontal rules --- */
+hr {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: 2.5rem 0;
+}
+
+/* --- Sidebar / TOC --- */
+#quarto-sidebar, .sidebar {
+  background-color: var(--bg-secondary) !important;
+  border-right: 1px solid var(--border-subtle) !important;
+}
+
+.sidebar-title {
+  font-family: var(--font-display) !important;
+  color: var(--text-primary) !important;
+  font-weight: 700;
+}
+
+.sidebar-item a {
+  color: var(--text-muted) !important;
+  font-size: 0.85rem;
+  transition: color 0.15s;
+}
+
+.sidebar-item a:hover,
+.sidebar-item a.active {
+  color: var(--accent-brazil) !important;
+}
+
+/* --- On this page TOC --- */
+#quarto-margin-sidebar .toc-active-item a {
+  color: var(--accent-brazil) !important;
+  font-weight: 600;
+}
+
+/* --- Columns --- */
+.columns {
+  gap: 2rem;
+}
+
+/* --- Footer --- */
+footer, .quarto-footer {
+  background-color: var(--bg-secondary) !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  color: var(--text-muted) !important;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-brazil);
+}
+
+/* --- DT table cell text --- */
+table.dataTable tbody td,
+table.dataTable tbody tr td,
+.dataTables_scrollBody td,
+table.dataTable thead th,
+table.dataTable thead td {
+  color: #e8e8f0 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: #e8e8f0 !important;
+}

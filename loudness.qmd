@@ -1,0 +1,114 @@
+---
+title: "Loudness & Rhythm"
+---
+```{r setup}
+#| include: false
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+
+brazilian <- read.csv("Brazilian_Phonk_UvA.csv")
+russian <- read.csv("Drift_Phonk_UvA.csv")
+brazilian$Genre <- "Brazilian Phonk"
+russian$Genre <- "Russian Drift Phonk"
+corpus <- bind_rows(brazilian, russian)
+
+phonk_colors <- c("Brazilian Phonk" = "#e63946", "Russian Drift Phonk" = "#4895ef")
+
+phonk_theme <- theme_minimal(base_size = 13) +
+  theme(
+    plot.background = element_rect(fill = "#141417", color = NA),
+    panel.background = element_rect(fill = "#141417", color = NA),
+    panel.grid.major = element_line(color = "#2a2a35", linewidth = 0.4),
+    panel.grid.minor = element_blank(),
+    text = element_text(color = "#e8e8f0"),
+    axis.text = element_text(color = "#888899", size = 11),
+    axis.title = element_text(color = "#888899", size = 11),
+    plot.title = element_text(color = "#e8e8f0", face = "bold", size = 14),
+    plot.subtitle = element_text(color = "#888899", size = 11),
+    legend.background = element_rect(fill = "#141417", color = NA),
+    legend.key = element_rect(fill = "#141417", color = NA),
+    legend.text = element_text(color = "#e8e8f0", size = 11),
+    legend.title = element_blank(),
+    strip.text = element_text(color = "#e8e8f0", face = "bold"),
+    strip.background = element_rect(fill = "#1a1a1f", color = NA)
+  )
+```
+
+## Tempo and Loudness
+
+This section looks at two features that shape how Phonk *feels* to a listener: **tempo** (how fast the track moves) and **loudness** (how hard it hits). In Phonk, these are not just technical measurements. They are creative choices that define the mood and purpose of a track.
+
+---
+
+## Tempo Distribution
+```{r}
+#| echo: false
+#| fig-height: 5
+#| fig-width: 9
+
+ggplot(corpus, aes(x = Tempo, fill = Genre)) +
+  geom_histogram(
+    binwidth = 5,
+    position = "identity",
+    alpha = 0.8,
+    color = "#141417",
+    linewidth = 0.3
+  ) +
+  scale_fill_manual(values = phonk_colors) +
+  scale_x_continuous(breaks = seq(60, 210, by = 20), limits = c(60, 210)) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.05))) +
+  labs(
+    title = "Tempo Distribution: Brazilian vs. Russian Phonk",
+    subtitle = "Comparing BPM across 114 corpus tracks",
+    x = "Tempo (BPM)",
+    y = "Number of Tracks"
+  ) +
+  phonk_theme +
+  theme(
+    legend.position = c(0.85, 0.85),
+    legend.direction = "vertical"
+  )
+```
+
+The most striking thing about this chart is the tall red spike at **130 BPM**. Almost all Brazilian Phonk tracks cluster right there. This kind of consistency is rare in music and suggests that 130 BPM has become an unwritten rule for this subgenre. Producers who deviate from it get fewer streams, so the genre has slowly locked in around that number.
+
+Russian Drift Phonk looks completely different. The blue bars are spread out from around 80 BPM to 180 BPM. This makes sense given the genre's origins: Russian Phonk grew out of car-culture video communities online, where producers cared more about the *feeling* of a track than following a tempo convention.
+
+The corpus has roughly equal numbers of tracks from each subgenre (about 57 each), so the Brazilian spike is real and not just a result of having more tracks.
+
+---
+
+## Loudness and Energy
+```{r}
+#| echo: false
+#| fig-height: 5
+#| fig-width: 9
+
+corpus |>
+  select(Genre, Loudness, Energy) |>
+  pivot_longer(cols = c(Loudness, Energy), names_to = "Feature", values_to = "Value") |>
+  ggplot(aes(x = Genre, y = Value, fill = Genre)) +
+  geom_violin(alpha = 0.35, color = NA) +
+  geom_boxplot(width = 0.12, alpha = 0.9, outlier.shape = 21,
+               outlier.fill = "#e8e8f0", outlier.color = "#141417",
+               outlier.size = 1.5) +
+  scale_fill_manual(values = phonk_colors) +
+  facet_wrap(~Feature, scales = "free_y") +
+  labs(
+    title = "Loudness and Energy by Subgenre",
+    x = NULL,
+    y = NULL
+  ) +
+  phonk_theme +
+  theme(
+    legend.position = "none",
+    axis.text.x = element_text(size = 10)
+  )
+```
+
+**Loudness** is measured in dBFS, where values closer to 0 mean louder. **Energy** is Spotify's score for how intense a track feels, ranging from 0 to 1.
+
+Brazilian Phonk tends to score higher on both. Tracks are heavily compressed and mastered to sound as loud and punchy as possible, because they are made for gym playlists and high-energy DJ sets where volume matters.
+
+Russian Phonk is still loud by most standards, but it leaves a bit more room for dynamics. The darker, cinematic style sometimes calls for quieter moments, like a slow intro before the main part kicks in.

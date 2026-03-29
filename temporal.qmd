@@ -1,0 +1,144 @@
+---
+title: "Temporal Features"
+---
+```{r setup}
+#| include: false
+library(tuneR)
+library(seewave)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(e1071)
+
+brazil_wav <- readMP3("MONTAGEM REBOLA.mp3")
+russian_wav <- readMP3("GREEN ORXNGE x Send 1 - S.X.N.D. N.X.D.E.S..mp3")
+
+if (brazil_wav@stereo) brazil_wav <- mono(brazil_wav, "both")
+if (russian_wav@stereo) russian_wav <- mono(russian_wav, "both")
+
+# Novelty function via spectral flux
+novelty_from_wav <- function(wav_obj, hop = 512) {
+  sr <- wav_obj@samp.rate
+  samples <- as.numeric(wav_obj@left)
+  n <- length(samples)
+  frames <- seq(1, n - hop, by = hop)
+  
+  # Compute spectral flux between consecutive frames
+  window_size <- 1024
+  prev_spec <- rep(0, window_size / 2)
+  flux <- numeric(length(frames))
+  
+  for (i in seq_along(frames)) {
+    start <- frames[i]
+    end <- min(start + window_size - 1, n)
+    chunk <- samples[start:end]
+    if (length(chunk) < window_size) chunk <- c(chunk, rep(0, window_size - length(chunk)))
+    spec <- Mod(fft(chunk * hanning.w(window_size)))[1:(window_size / 2)]
+    spec <- spec / (max(spec) + 1e-10)
+    diff_spec <- pmax(spec - prev_spec, 0)
+    flux[i] <- sum(diff_spec)
+    prev_spec <- spec
+  }
+  
+  times <- frames / sr
+  data.frame(Time = times, Novelty = flux)
+}
+
+brazil_novelty <- novelty_from_wav(brazil_wav)
+russian_novelty <- novelty_from_wav(russian_wav)
+
+phonk_theme <- theme_minimal(base_size = 13) +
+  theme(
+    plot.background = element_rect(fill = "#141417", color = NA),
+    panel.background = element_rect(fill = "#141417", color = NA),
+    panel.grid.major = element_line(color = "#2a2a35", linewidth = 0.4),
+    panel.grid.minor = element_blank(),
+    text = element_text(color = "#e8e8f0"),
+    axis.text = element_text(color = "#888899", size = 10),
+    axis.title = element_text(color = "#888899", size = 11),
+    plot.title = element_text(color = "#e8e8f0", face = "bold", size = 14),
+    plot.subtitle = element_text(color = "#888899", size = 11),
+    legend.background = element_rect(fill = "#141417", color = NA),
+    legend.text = element_text(color = "#e8e8f0"),
+    legend.title = element_blank()
+  )
+```
+
+## Temporal Features
+
+This section looks at the rhythmic and structural patterns in the two tracks over time. Specifically, it uses a **novelty function** to detect moments where the sound changes noticeably. Peaks in the novelty function correspond to onsets: a beat hitting, a new element entering, or a structural transition.
+
+Comparing the novelty functions of the two tracks shows how differently they are structured rhythmically.
+
+---
+
+## 🇧🇷 MONTAGEM REBOLA — Novelty Function
+```{r}
+#| echo: false
+#| fig-height: 3.5
+#| fig-cap: "Spectral novelty function: Montagem Rebola"
+
+ggplot(brazil_novelty, aes(x = Time, y = Novelty)) +
+  geom_line(color = "#e63946", linewidth = 0.5, alpha = 0.85) +
+  labs(
+    title = "Novelty Function: MONTAGEM REBOLA",
+    subtitle = "Peaks indicate rhythmic onsets and structural transitions",
+    x = "Time (s)",
+    y = "Novelty"
+  ) +
+  phonk_theme
+```
+
+The novelty function for *MONTAGEM REBOLA* is expected to show **dense, evenly spaced peaks** throughout the track. This would confirm what the chromagram already suggested: the track is built on a relentlessly consistent rhythmic loop with no real quiet sections or structural breaks. Every beat hits with roughly the same force, which is exactly what Brazilian Phonk is designed to do.
+
+---
+
+## 🇷🇺 S.X.N.D. N.X.D.E.S. — Novelty Function
+```{r}
+#| echo: false
+#| fig-height: 3.5
+#| fig-cap: "Spectral novelty function: S.X.N.D. N.X.D.E.S."
+
+ggplot(russian_novelty, aes(x = Time, y = Novelty)) +
+  geom_line(color = "#4895ef", linewidth = 0.5, alpha = 0.85) +
+  labs(
+    title = "Novelty Function: S.X.N.D. N.X.D.E.S.",
+    subtitle = "Peaks indicate rhythmic onsets and structural transitions",
+    x = "Time (s)",
+    y = "Novelty"
+  ) +
+  phonk_theme
+```
+
+The Russian track is expected to show more variation in peak height and spacing. Russian Drift Phonk uses quieter intro sections, gradual build-ups, and drop moments where the energy suddenly increases. These would show up as clusters of larger peaks at structural transition points, with calmer stretches in between. This kind of rhythmic variance is part of what makes the genre feel more cinematic compared to the Brazilian style.
+
+---
+
+## Comparison
+```{r}
+#| echo: false
+#| fig-height: 5
+#| fig-cap: "Novelty functions compared side by side"
+
+brazil_novelty$Track <- "MONTAGEM REBOLA (Brazil)"
+russian_novelty$Track <- "S.X.N.D. N.X.D.E.S. (Russia)"
+
+bind_rows(brazil_novelty, russian_novelty) %>%
+  ggplot(aes(x = Time, y = Novelty, color = Track)) +
+  geom_line(linewidth = 0.45, alpha = 0.85) +
+  scale_color_manual(values = c(
+    "MONTAGEM REBOLA (Brazil)" = "#e63946",
+    "S.X.N.D. N.X.D.E.S. (Russia)" = "#4895ef"
+  )) +
+  facet_wrap(~Track, ncol = 1, scales = "free_x") +
+  labs(
+    title = "Novelty Functions: Brazilian vs. Russian Phonk",
+    x = "Time (s)",
+    y = "Novelty"
+  ) +
+  phonk_theme +
+  theme(legend.position = "none",
+        strip.text = element_text(color = "#e8e8f0", face = "bold"))
+```
+
+Shown together, the difference in rhythmic structure becomes clear. The Brazilian track maintains a steady wall of onsets. The Russian track breathes more, with moments of relative calm that make the high-energy sections hit harder by contrast. This is the temporal signature of the two subgenres: one is a machine, the other tells a story.

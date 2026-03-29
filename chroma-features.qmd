@@ -1,0 +1,116 @@
+---
+title: "Chroma Features"
+---
+```{r setup}
+#| include: false
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+
+brazil_chroma <- read.csv("brazil_chroma2.csv")
+russian_chroma <- read.csv("russian_chroma2.csv")
+
+pitch_order <- c("C", "C.", "D", "D.", "E", "F", "F.", "G", "G.", "A", "A.", "B")
+pitch_labels <- c("C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B")
+
+chroma_theme <- theme_minimal(base_size = 12) +
+  theme(
+    plot.background = element_rect(fill = "#141417", color = NA),
+    panel.background = element_rect(fill = "#141417", color = NA),
+    panel.grid = element_blank(),
+    text = element_text(color = "#e8e8f0"),
+    axis.text = element_text(color = "#888899"),
+    axis.title = element_text(color = "#888899"),
+    plot.title = element_text(color = "#e8e8f0", face = "bold", size = 13),
+    plot.subtitle = element_text(color = "#888899", size = 10),
+    legend.background = element_rect(fill = "#141417", color = NA),
+    legend.text = element_text(color = "#888899"),
+    legend.title = element_text(color = "#888899")
+  )
+```
+
+## Pitch and Harmony
+
+A chromagram shows how the energy in a track is spread across the 12 pitch classes (C, C#, D, and so on) over time. Instead of showing exact frequencies, it collapses everything into a single octave. This makes it easier to spot harmonic patterns, like a repeated chord or a consistent key center, across a full track.
+
+### How to read a chromagram
+
+The x-axis shows time (in seconds). The y-axis shows the 12 pitch classes, from C at the bottom to B at the top. Brighter colors mean more energy at that pitch class at that moment.
+
+- **Bright vertical streaks** across many pitch classes at once suggest a noisy, rhythmic hit with no clear harmonic content
+- **Bright horizontal bands** running across the full width suggest a stable pitch that repeats throughout the track
+
+---
+
+## 🇧🇷 MONTAGEM REBOLA — Brazilian Phonk
+```{r}
+#| echo: false
+#| fig-cap: "Chroma feature analysis: Montagem Rebola"
+#| fig-height: 3.5
+
+brazil_chroma |>
+  pivot_longer(-TIME, names_to = "Pitch", values_to = "Intensity") |>
+  mutate(
+    Pitch = factor(Pitch, levels = pitch_order, labels = pitch_labels)
+  ) |>
+  ggplot(aes(x = TIME, y = Pitch, fill = Intensity)) +
+  geom_tile() +
+  scale_fill_viridis_c(option = "inferno", name = "Intensity") +
+  labs(
+    title = "Harmonic Fingerprint: Brazilian Phonk",
+    subtitle = "Chroma feature analysis: Montagem Rebola",
+    x = "Time (seconds)",
+    y = "Pitch Class"
+  ) +
+  chroma_theme
+```
+
+The chromagram for *MONTAGEM REBOLA* is full of bright vertical flashes across nearly all pitch classes at the same time. There is no clear horizontal band, meaning no single pitch is held consistently. The track has no real harmonic center.
+
+This is typical for Brazilian Phonk. The genre is built around hard-hitting loops and rhythmic impact, not melody. The bursts you see correspond to those loop hits, which activate all frequencies at once rather than targeting a specific note. In course terms, this pattern matches **H-topic H5**, which describes the kind of noise-heavy, chord-free sound found in high-energy rap-adjacent genres.
+
+The intensity is also consistent from start to finish. There are no quieter sections or melodic breaks. The track is designed to keep energy high the whole way through, and the chromagram shows that clearly.
+
+---
+
+## 🇷🇺 S.X.N.D. N.X.D.E.S. — Russian Drift Phonk
+```{r}
+#| echo: false
+#| fig-cap: "Chroma feature analysis: S.X.N.D. N.X.D.E.S."
+#| fig-height: 3.5
+
+russian_chroma |>
+  pivot_longer(-TIME, names_to = "Pitch", values_to = "Intensity") |>
+  mutate(
+    Pitch = factor(Pitch, levels = pitch_order, labels = pitch_labels)
+  ) |>
+  ggplot(aes(x = TIME, y = Pitch, fill = Intensity)) +
+  geom_tile() +
+  scale_fill_viridis_c(option = "inferno", name = "Intensity") +
+  labs(
+    title = "Harmonic Fingerprint: Russian Phonk",
+    subtitle = "Chroma feature analysis: S.X.N.D. N.X.D.E.S.",
+    x = "Time (seconds)",
+    y = "Pitch Class"
+  ) +
+  chroma_theme
+```
+
+The Russian track looks completely different. Instead of scattered vertical bursts, this chromagram shows **clear horizontal bands**, most visibly at **F#** and **D**, that run across the full track. This is the signature of a track with a strong, consistent key center.
+
+The dominance of F# and D points to **F# Minor**, a key often linked to a dark or tense mood. This is not a coincidence. Russian Drift Phonk is built around looped cowbell melodies and minor-key synth lines that create a cinematic atmosphere. The cowbell loop in this track plays the same short figure on repeat, which is exactly why F# shows up so clearly.
+
+If you look closely, the brightness of the bands shifts slightly at certain points. These shifts correspond to structural moments, like the intro giving way to the main section, or a brief breakdown. The track is still repetitive by design, but these small changes create a sense of tension and release over time.
+
+---
+
+## Comparison
+
+| | MONTAGEM REBOLA (Brazil) | S.X.N.D. N.X.D.E.S. (Russia) |
+|:---|:---|:---|
+| **Pattern** | Vertical bursts across all pitches | Horizontal bands on F# and D |
+| **Key center** | None | F# Minor |
+| **Structure** | Uniform energy throughout | Subtle shifts between sections |
+| **Priority** | Rhythmic impact | Melodic atmosphere |
+
+The contrast between these two chromagrams captures something important about the two subgenres. Brazilian Phonk does not rely on harmony at all. Russian Drift Phonk uses a repeated melodic loop to build its identity. This harmonic difference also turns out to be something the machine learning classifier picks up on, as you can read in the Classification section.
