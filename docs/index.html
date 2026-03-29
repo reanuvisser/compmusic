@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Timbre Features – Phonk Outlier Analysis</title>
+<title>Phonk Outlier Analysis: Brazil vs.&nbsp;Russia – Phonk Outlier Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -106,10 +106,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-
 
 
 <link rel="stylesheet" href="style.css">
@@ -133,7 +129,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
@@ -149,7 +145,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Loudness &amp; Rhythm</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./timbre.html" aria-current="page"> 
+    <a class="nav-link" href="./timbre.html"> 
 <span class="menu-text">Timbre</span></a>
   </li>  
   <li class="nav-item">
@@ -167,7 +163,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/rickyspeijker"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/reanuvisser"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -187,10 +183,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#timbre-features" id="toc-timbre-features" class="nav-link active" data-scroll-target="#timbre-features">Timbre Features</a></li>
-  <li><a href="#montagem-rebola" id="toc-montagem-rebola" class="nav-link" data-scroll-target="#montagem-rebola">🇧🇷 MONTAGEM REBOLA</a></li>
-  <li><a href="#s.x.n.d.-n.x.d.e.s." id="toc-s.x.n.d.-n.x.d.e.s." class="nav-link" data-scroll-target="#s.x.n.d.-n.x.d.e.s.">🇷🇺 S.X.N.D. N.X.D.E.S.</a></li>
-  <li><a href="#what-timbre-tells-us" id="toc-what-timbre-tells-us" class="nav-link" data-scroll-target="#what-timbre-tells-us">What Timbre Tells Us</a></li>
+  <li><a href="#about-this-project" id="toc-about-this-project" class="nav-link active" data-scroll-target="#about-this-project">About This Project</a>
+  <ul class="collapse">
+  <li><a href="#what-is-phonk" id="toc-what-is-phonk" class="nav-link" data-scroll-target="#what-is-phonk">What is Phonk?</a></li>
+  </ul></li>
+  <li><a href="#the-corpus" id="toc-the-corpus" class="nav-link" data-scroll-target="#the-corpus">The Corpus</a></li>
+  <li><a href="#research-overview" id="toc-research-overview" class="nav-link" data-scroll-target="#research-overview">Research Overview</a></li>
   </ul>
 </nav>
     </div>
@@ -199,7 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Timbre Features</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Phonk Outlier Analysis: Brazil vs.&nbsp;Russia</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -216,45 +214,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="timbre-features" class="level2">
-<h2 class="anchored" data-anchor-id="timbre-features">Timbre Features</h2>
-<p>Timbre is what makes two instruments playing the same note sound different. It is the texture and color of a sound. In music production, timbre is what separates a dense, wall-of-sound drop from a sparse, open breakdown. To measure it computationally, we use <strong>Mel-Frequency Cepstral Coefficients (MFCCs)</strong>, which capture how energy is distributed across frequency bands over time.</p>
-<p>A <strong>self-similarity matrix (SSM)</strong> takes those MFCC values and compares every moment in a track to every other moment. Sections that sound similar to each other show up as bright squares along the diagonal. Repeated sections show up as bright off-diagonal blocks.</p>
+<section id="about-this-project" class="level2">
+<h2 class="anchored" data-anchor-id="about-this-project">About This Project</h2>
+<section id="what-is-phonk" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-phonk">What is Phonk?</h3>
+<p>Phonk is a genre of hip-hop and electronic music that started in the early 2010s on SoundCloud. It was originally built on sampled Memphis rap vocals, lo-fi production, and heavy 808 bass. Over time, two very different regional versions of the genre emerged, each taking it in a completely different direction.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="brazilian-phonk" class="level4">
+<h4 class="anchored" data-anchor-id="brazilian-phonk">🇧🇷 Brazilian Phonk</h4>
+<p>Brazilian Phonk turned the genre into a high-energy club sound. Producers dropped the lo-fi aesthetic and replaced it with tight, aggressive loops, heavy compression, and tempos locked around 130 BPM. It now dominates Brazilian streaming charts and shows up in workout playlists and DJ sets. The style is very consistent by design.</p>
+<p><strong>Key characteristics:</strong></p>
+<ul>
+<li>Tempo: ~130 BPM (very consistent)</li>
+<li>High energy and loud</li>
+<li>Minimal melody</li>
+<li>Made for clubs and gyms</li>
+</ul>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="russian-drift-phonk" class="level4">
+<h4 class="anchored" data-anchor-id="russian-drift-phonk">🇷🇺 Russian Drift Phonk</h4>
+<p>Russian Drift Phonk went in a darker, more cinematic direction. It grew out of online car-culture communities and is known for haunting cowbell loops, minor-key melodies, and a much wider tempo range. The genre blew up on TikTok and YouTube through drift car videos.</p>
+<p><strong>Key characteristics:</strong></p>
+<ul>
+<li>Tempo: 80–180 BPM (very spread out)</li>
+<li>Dark, minor-key sound</li>
+<li>Strong cowbell and synth melodies</li>
+<li>Linked to motorsport and action content</li>
+</ul>
+</section>
+</div>
+</div>
 <hr>
 </section>
-<section id="montagem-rebola" class="level2">
-<h2 class="anchored" data-anchor-id="montagem-rebola">🇧🇷 MONTAGEM REBOLA</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="timbre_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="768"></p>
-<figcaption>Self-similarity matrix: Montagem Rebola (MFCC-based)</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>The SSM for <em>MONTAGEM REBOLA</em> is expected to show a strongly uniform structure. Because the track is built from a single repeating loop with minimal variation, nearly every section should look similar to every other section. The bright diagonal confirms timbral consistency; any bright off-diagonal blocks reveal where the loop repeats.</p>
+</section>
+<section id="the-corpus" class="level2">
+<h2 class="anchored" data-anchor-id="the-corpus">The Corpus</h2>
+<p>For this project, I submitted two Spotify playlists to the class corpus, each representing one of these subgenres. Together they contain <strong>114 tracks</strong>, split 57/57 between Brazilian Phonk and Russian Drift Phonk.</p>
+<p>The two playlists were chosen because they represent opposite ends of the Phonk spectrum. This contrast makes them a good subject for computational analysis: if the two styles are truly different, the data should reflect that.</p>
+<p>The central question of this portfolio is:</p>
+<blockquote class="blockquote">
+<p><em>Can computational musicology capture the difference between Brazilian and Russian Phonk, and if so, which audio features are most useful for telling them apart?</em></p>
+</blockquote>
 <hr>
 </section>
-<section id="s.x.n.d.-n.x.d.e.s." class="level2">
-<h2 class="anchored" data-anchor-id="s.x.n.d.-n.x.d.e.s.">🇷🇺 S.X.N.D. N.X.D.E.S.</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="timbre_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="768"></p>
-<figcaption>Self-similarity matrix: S.X.N.D. N.X.D.E.S. (MFCC-based)</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>The Russian track is expected to show more structural variation in its SSM. The cinematic, tension-and-release architecture of Russian Drift Phonk means sections change more noticeably over time. Look for distinct rectangular blocks that separate the intro, main section, and any breakdown passages. These would confirm that the track has a deliberate structural arc rather than pure loop repetition.</p>
-<hr>
-</section>
-<section id="what-timbre-tells-us" class="level2">
-<h2 class="anchored" data-anchor-id="what-timbre-tells-us">What Timbre Tells Us</h2>
-<p>Comparing the two SSMs reveals something the chromagrams and tempo charts cannot: how the <em>texture</em> of each track evolves over time. Brazilian Phonk is timbrally static by design. Russian Drift Phonk uses timbral shifts to create a sense of movement and drama. This structural difference is one more way the two subgenres diverge at a computational level.</p>
+<section id="research-overview" class="level2">
+<h2 class="anchored" data-anchor-id="research-overview">Research Overview</h2>
+<p>This portfolio covers the analysis in five sections:</p>
+<ol type="1">
+<li><strong>Corpus</strong> — The dataset of tracks, including the Spotify playlists</li>
+<li><strong>Chroma Features</strong> — Pitch and harmony analysis of one track from each subgenre</li>
+<li><strong>Loudness &amp; Rhythm</strong> — Tempo and loudness patterns across both subgenres</li>
+<li><strong>Classification</strong> — A machine learning model trained to distinguish the two styles</li>
+<li><strong>Conclusion</strong> — Key takeaways and what they mean</li>
+</ol>
+<p>Use the navigation bar at the top to move between sections.</p>
 
 
 <!-- -->
@@ -714,129 +729,68 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Timbre Features"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Phonk Outlier Analysis: Brazil vs. Russia"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="in">```{r setup}</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tuneR)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(seewave)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Load audio files</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>brazil_wav <span class="ot">&lt;-</span> <span class="fu">readMP3</span>(<span class="st">"MONTAGEM REBOLA.mp3"</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>russian_wav <span class="ot">&lt;-</span> <span class="fu">readMP3</span>(<span class="st">"GREEN ORXNGE x Send 1 - S.X.N.D. N.X.D.E.S..mp3"</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to mono if stereo</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (brazil_wav<span class="sc">@</span>stereo) brazil_wav <span class="ot">&lt;-</span> <span class="fu">mono</span>(brazil_wav, <span class="st">"both"</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (russian_wav<span class="sc">@</span>stereo) russian_wav <span class="ot">&lt;-</span> <span class="fu">mono</span>(russian_wav, <span class="st">"both"</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute MFCCs</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>brazil_mfcc <span class="ot">&lt;-</span> <span class="fu">melfcc</span>(brazil_wav, <span class="at">numcep =</span> <span class="dv">13</span>, <span class="at">hoptime =</span> <span class="fl">0.05</span>)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>russian_mfcc <span class="ot">&lt;-</span> <span class="fu">melfcc</span>(russian_wav, <span class="at">numcep =</span> <span class="dv">13</span>, <span class="at">hoptime =</span> <span class="fl">0.05</span>)</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Self-similarity matrix function</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>compute_ssm <span class="ot">&lt;-</span> <span class="cf">function</span>(mfcc_matrix) {</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(mfcc_matrix)</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  ssm <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>, n, n)</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n) {</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n) {</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>      diff <span class="ot">&lt;-</span> mfcc_matrix[i,] <span class="sc">-</span> mfcc_matrix[j,]</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>      ssm[i,j] <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">sqrt</span>(<span class="fu">sum</span>(diff<span class="sc">^</span><span class="dv">2</span>)))</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  ssm</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## About This Project</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">### What is Phonk?</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Phonk is a genre of hip-hop and electronic music that started in the early 2010s on SoundCloud. It was originally built on sampled Memphis rap vocals, lo-fi production, and heavy 808 bass. Over time, two very different regional versions of the genre emerged, each taking it in a completely different direction.</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>:::: {.columns}</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>::: {.column width="50%"}</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 🇧🇷 Brazilian Phonk</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Brazilian Phonk turned the genre into a high-energy club sound. Producers dropped the lo-fi aesthetic and replaced it with tight, aggressive loops, heavy compression, and tempos locked around 130 BPM. It now dominates Brazilian streaming charts and shows up in workout playlists and DJ sets. The style is very consistent by design.</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>**Key characteristics:**</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tempo: ~130 BPM (very consistent)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>High energy and loud</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Minimal melody</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Made for clubs and gyms</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>::: {.column width="50%"}</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 🇷🇺 Russian Drift Phonk</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>Russian Drift Phonk went in a darker, more cinematic direction. It grew out of online car-culture communities and is known for haunting cowbell loops, minor-key melodies, and a much wider tempo range. The genre blew up on TikTok and YouTube through drift car videos.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>**Key characteristics:**</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tempo: 80–180 BPM (very spread out)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dark, minor-key sound</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Strong cowbell and synth melodies</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Linked to motorsport and action content</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Subsample for performance (every 4th frame = ~0.2s resolution)</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>br_sub <span class="ot">&lt;-</span> brazil_mfcc[<span class="fu">seq</span>(<span class="dv">1</span>, <span class="fu">nrow</span>(brazil_mfcc), <span class="at">by =</span> <span class="dv">4</span>), ]</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>ru_sub <span class="ot">&lt;-</span> russian_mfcc[<span class="fu">seq</span>(<span class="dv">1</span>, <span class="fu">nrow</span>(russian_mfcc), <span class="at">by =</span> <span class="dv">4</span>), ]</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>::::</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>brazil_ssm <span class="ot">&lt;-</span> <span class="fu">compute_ssm</span>(br_sub)</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>russian_ssm <span class="ot">&lt;-</span> <span class="fu">compute_ssm</span>(ru_sub)</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Helper to convert SSM to long format for ggplot</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>ssm_to_df <span class="ot">&lt;-</span> <span class="cf">function</span>(ssm_matrix, <span class="at">hop =</span> <span class="fl">0.2</span>) {</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(ssm_matrix)</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  times <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="at">by =</span> hop, <span class="at">length.out =</span> n)</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand.grid</span>(<span class="at">Time1 =</span> times, <span class="at">Time2 =</span> times) <span class="sc">%&gt;%</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">Similarity =</span> <span class="fu">as.vector</span>(ssm_matrix))</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>brazil_ssm_df <span class="ot">&lt;-</span> <span class="fu">ssm_to_df</span>(brazil_ssm)</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>russian_ssm_df <span class="ot">&lt;-</span> <span class="fu">ssm_to_df</span>(russian_ssm)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Corpus</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>For this project, I submitted two Spotify playlists to the class corpus, each representing one of these subgenres. Together they contain **114 tracks**, split 57/57 between Brazilian Phonk and Russian Drift Phonk.</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>The two playlists were chosen because they represent opposite ends of the Phonk spectrum. This contrast makes them a good subject for computational analysis: if the two styles are truly different, the data should reflect that.</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>The central question of this portfolio is:</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *Can computational musicology capture the difference between Brazilian and Russian Phonk, and if so, which audio features are most useful for telling them apart?*</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## Research Overview</span></span>
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>phonk_theme <span class="ot">&lt;-</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>) <span class="sc">+</span></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"#141417"</span>, <span class="at">color =</span> <span class="cn">NA</span>),</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"#141417"</span>, <span class="at">color =</span> <span class="cn">NA</span>),</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"#e8e8f0"</span>),</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"#888899"</span>, <span class="at">size =</span> <span class="dv">10</span>),</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"#888899"</span>, <span class="at">size =</span> <span class="dv">11</span>),</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"#e8e8f0"</span>, <span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">14</span>),</span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"#888899"</span>, <span class="at">size =</span> <span class="dv">11</span>),</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"#141417"</span>, <span class="at">color =</span> <span class="cn">NA</span>),</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"#888899"</span>),</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"#888899"</span>)</span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="fu">## Timbre Features</span></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>Timbre is what makes two instruments playing the same note sound different. It is the texture and color of a sound. In music production, timbre is what separates a dense, wall-of-sound drop from a sparse, open breakdown. To measure it computationally, we use **Mel-Frequency Cepstral Coefficients (MFCCs)**, which capture how energy is distributed across frequency bands over time.</span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>A **self-similarity matrix (SSM)** takes those MFCC values and compares every moment in a track to every other moment. Sections that sound similar to each other show up as bright squares along the diagonal. Repeated sections show up as bright off-diagonal blocks.</span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🇧🇷 MONTAGEM REBOLA</span></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Self-similarity matrix: Montagem Rebola (MFCC-based)"</span></span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(brazil_ssm_df, <span class="fu">aes</span>(<span class="at">x =</span> Time1, <span class="at">y =</span> Time2, <span class="at">fill =</span> Similarity)) <span class="sc">+</span></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>() <span class="sc">+</span></span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"inferno"</span>, <span class="at">name =</span> <span class="st">"Similarity"</span>) <span class="sc">+</span></span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Timbre Self-Similarity: MONTAGEM REBOLA"</span>,</span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Brazilian Phonk — MFCC cosine similarity"</span>,</span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Time (s)"</span>, <span class="at">y =</span> <span class="st">"Time (s)"</span></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>  phonk_theme</span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>The SSM for *MONTAGEM REBOLA* is expected to show a strongly uniform structure. Because the track is built from a single repeating loop with minimal variation, nearly every section should look similar to every other section. The bright diagonal confirms timbral consistency; any bright off-diagonal blocks reveal where the loop repeats.</span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🇷🇺 S.X.N.D. N.X.D.E.S.</span></span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Self-similarity matrix: S.X.N.D. N.X.D.E.S. (MFCC-based)"</span></span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(russian_ssm_df, <span class="fu">aes</span>(<span class="at">x =</span> Time1, <span class="at">y =</span> Time2, <span class="at">fill =</span> Similarity)) <span class="sc">+</span></span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>() <span class="sc">+</span></span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"inferno"</span>, <span class="at">name =</span> <span class="st">"Similarity"</span>) <span class="sc">+</span></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Timbre Self-Similarity: S.X.N.D. N.X.D.E.S."</span>,</span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Russian Drift Phonk — MFCC cosine similarity"</span>,</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Time (s)"</span>, <span class="at">y =</span> <span class="st">"Time (s)"</span></span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>  phonk_theme</span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>The Russian track is expected to show more structural variation in its SSM. The cinematic, tension-and-release architecture of Russian Drift Phonk means sections change more noticeably over time. Look for distinct rectangular blocks that separate the intro, main section, and any breakdown passages. These would confirm that the track has a deliberate structural arc rather than pure loop repetition.</span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="fu">## What Timbre Tells Us</span></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>Comparing the two SSMs reveals something the chromagrams and tempo charts cannot: how the *texture* of each track evolves over time. Brazilian Phonk is timbrally static by design. Russian Drift Phonk uses timbral shifts to create a sense of movement and drama. This structural difference is one more way the two subgenres diverge at a computational level.</span>
-</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>This portfolio covers the analysis in five sections:</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Corpus** — The dataset of tracks, including the Spotify playlists</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Chroma Features** — Pitch and harmony analysis of one track from each subgenre</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Loudness &amp; Rhythm** — Tempo and loudness patterns across both subgenres</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Classification** — A machine learning model trained to distinguish the two styles</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Conclusion** — Key takeaways and what they mean</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>Use the navigation bar at the top to move between sections.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
